@@ -1,0 +1,1926 @@
+﻿{
+    "pick_your_project":  {
+                              "AI_LLM":  "SmartMeet-AI (failure-safe caching, 50x cut, timezone-correct parsing)",
+                              "API_arch":  "TaskFlow-API (layering, health-gated Compose, RBAC matrix)",
+                              "Go":  "GOLANG-Practice (23 programs to CRUD API)",
+                              "ML":  "Heart-disease-detection (0.9458 AUC, +80K pseudo-labels, 90.1% recall)",
+                              "React_fullstack":  "TypeMaster (O(1) keystrokes, 200 lessons, composite indexes)",
+                              "Security":  "Binance bot + Grozoom (NaN guards, TOCTOU logs, AES-CBC + PoW)"
+                          },
+    "flagships":  [
+                      {
+                          "architecture":  "React 18 SPA (axios + AuthContext + voice service) -\u003e Flask 3 JWT API (auth/meetings/voice/calendar blueprints) -\u003e Llama-3 intent service + ~300-line NL datetime parser + Google Calendar dual-read + ElevenLabs TTS; SQLite/PG via Flask-Migrate",
+                          "dates":  "Aug 2025 - Sep 2026 (created 2025-08-24, active through 2026-09-12, MIT license)",
+                          "evidence":  [
+                                           "backend/app/services/command_processor.py (1242 lines, 16 intents)",
+                                           "backend/app/services/datetime_parser.py (317 lines)",
+                                           "backend/app/services/llm_service.py (108 lines, Meta-Llama-3-8B-Instruct, temp 0.3)",
+                                           "backend/app/services/elevenlabs_service.py (72 lines, lru_cache 128)",
+                                           "backend/app/routes/*.py (16 endpoints across 4 blueprints)",
+                                           "backend/app/models.py (153 lines, 4 models)",
+                                           "backend/migrations/versions/ (4 linear revisions)",
+                                           "backend/tests/ (20 files, 103 test functions)",
+                                           "frontend/src/__tests__/ (6 files, 19 tests)",
+                                           "backend/.jules/bolt.md (12-entry perf journal)",
+                                           "README.md (362 lines, 14-row API table)"
+                                       ],
+                          "id":  "smartmeet-ai",
+                          "keywords":  [
+                                           "Flask",
+                                           "React",
+                                           "Llama-3",
+                                           "HuggingFace",
+                                           "ElevenLabs",
+                                           "Google Calendar",
+                                           "OAuth2",
+                                           "JWT",
+                                           "Bcrypt",
+                                           "SQLAlchemy",
+                                           "Alembic",
+                                           "pytest",
+                                           "Jest",
+                                           "Web Speech API",
+                                           "Tailwind"
+                                       ],
+                          "live_url":  null,
+                          "llm_brief":  "Flagship voice-powered meeting scheduler: speak a request in plain English and it becomes a real calendar event. React 18 + Tailwind frontend with a voice-first UI; Flask 3 JWT-secured API; HuggingFace Llama-3-8B-Instruct for intent classification; a ~300-line natural-language datetime parser; dual-read Google Calendar (live API with local DB fallback); ElevenLabs neural TTS spoken confirmations. 16 voice intents, 16 endpoints, 4 migrated tables, 122 tests, MIT licensed.",
+                          "metrics":  {
+                                          "alembic_revisions":  4,
+                                          "api_endpoints":  16,
+                                          "db_models":  4,
+                                          "frontend_tests":  19,
+                                          "intent_handlers":  16,
+                                          "jwt_expiry_hours":  12,
+                                          "llm":  "meta-llama/Meta-Llama-3-8B-Instruct, max_tokens 150, temp 0.3",
+                                          "ports":  {
+                                                        "api":  5000,
+                                                        "frontend":  3000
+                                                    },
+                                          "pytest_tests":  103,
+                                          "tts":  "eleven_multilingual_v2, lru_cache 128"
+                                      },
+                          "name":  "SmartMeet-AI",
+                          "repo_url":  "https://github.com/chirag-gupta7/SmartMeet-AI",
+                          "role":  "Sole builder (full-stack + AI integration)",
+                          "stack":  [
+                                        "Flask 3",
+                                        "React 18",
+                                        "Python 3.12",
+                                        "SQLAlchemy 2",
+                                        "Flask-Migrate/Alembic",
+                                        "JWT + Bcrypt",
+                                        "HuggingFace Llama-3-8B-Instruct",
+                                        "ElevenLabs",
+                                        "Google Calendar API + OAuth2",
+                                        "Web Speech API",
+                                        "Tailwind CSS",
+                                        "pytest",
+                                        "Jest + Testing Library"
+                                    ],
+                          "tagline":  "Voice-powered meeting scheduler - speak plain English, get real calendar events",
+                          "type":  "flagship project",
+                          "xyz_bullets":  [
+                                              {
+                                                  "bullet":  "Turned spoken plain-English requests into real calendar events end to end (mic to spoken confirmation in 6 steps) by wiring Web Speech capture, Llama-3 intent classification, a custom datetime parser, Google Calendar writes, and ElevenLabs TTS.",
+                                                  "x":  "Turned spoken plain-English requests into real calendar events end to end",
+                                                  "y":  "mic-to-spoken-confirmation in 6 steps with zero forms or clicks",
+                                                  "z":  "wiring Web Speech capture, Llama-3 intent classification, a custom datetime parser, Google Calendar writes, and ElevenLabs TTS"
+                                              },
+                                              {
+                                                  "bullet":  "Understood 16 voice intents (6 calendar + 10 utility: weather, news, timers, reminders, notes, search, translate, calculate, facts, jokes) with a 1,242-line dispatcher that never 500s, by validating every input with strict bounds and type checks.",
+                                                  "x":  "Understood 16 voice intents with zero unhandled failures",
+                                                  "y":  "every intent validated (length caps, regex guards, range checks) and 103 backend tests green",
+                                                  "z":  "building a 1,242-line command dispatcher with per-intent validation armor and full logging"
+                                              },
+                                              {
+                                                  "bullet":  "Parsed messy human time expressions (\u0027day after tomorrow\u0027, \u0027next Friday\u0027, \u00277 weekday forms\u0027, cross-midnight ranges, 12am-to-0 fix) with a 317-line parser that correctly anchors naive datetimes into the user\u0027s IANA timezone.",
+                                                  "x":  "Parsed messy human time expressions into exact datetimes",
+                                                  "y":  "7 weekday forms, cross-midnight ranges, 12am edge case, all-day detection all handled and tested",
+                                                  "z":  "writing a 317-line natural-language datetime parser with pre-compiled regexes and per-user timezone resolution"
+                                              },
+                                              {
+                                                  "bullet":  "Kept the calendar working even when Google is unreachable by implementing dual-read (live Google API first, local database fallback) plus automatic OAuth token refresh persisted per user.",
+                                                  "x":  "Kept the calendar working even when Google is unreachable",
+                                                  "y":  "live reads with seamless local fallback; tokens auto-refresh without re-login",
+                                                  "z":  "implementing dual-read event fetching and per-user credential storage with refresh persistence"
+                                              },
+                                              {
+                                                  "bullet":  "Cut AI latency from ~1s to ~1ms on repeated phrases (up to 50x, asserted in tests) by pooling HTTP clients and memoizing LLM and TTS responses with bounded lru_caches that never cache failures.",
+                                                  "x":  "Cut AI latency from ~1s to ~1ms on repeated phrases",
+                                                  "y":  "up to 50x speedup, asserted by performance tests (mocked 0.5s call returns in \u003c0.01s cached)",
+                                                  "z":  "pooling HTTP clients and memoizing LLM (100 slots) and TTS (128 slots) responses with fail-open wrappers"
+                                              },
+                                              {
+                                                  "bullet":  "Locked down the API with 12-hour JWT auth, Bcrypt hashing, a boot-guard that refuses production start on placeholder secrets, 4 security headers on every response, and per-user data isolation tested by ownership tests.",
+                                                  "x":  "Locked down the API with defense in depth",
+                                                  "y":  "12h JWT, Bcrypt, boot-guard secret refusal, 4 pinned security headers, ownership tests passing",
+                                                  "z":  "layering Flask-JWT-Extended auth, secret validation, security headers, and owner-scoped queries"
+                                              },
+                                              {
+                                                  "bullet":  "Made voice math hacker-proof by evaluating expressions in a sandboxed AST evaluator (no eval/exec) with a documented CPU-DoS fix capping exponents at |1000|.",
+                                                  "x":  "Made voice math hacker-proof",
+                                                  "y":  "arbitrary code execution impossible; exponent DoS capped and regression-tested",
+                                                  "z":  "evaluating expressions in a sandboxed AST evaluator with an exponent bound recorded in the security journal"
+                                              },
+                                              {
+                                                  "bullet":  "Shipped a real database evolution story (4 linear Alembic revisions: JSON extra_data, owner/start_time indexes, user timezones, named CASCADE foreign keys) with SQLite PRAGMA foreign_keys enforcement for local dev.",
+                                                  "x":  "Shipped a real database evolution story, not create_all shortcuts",
+                                                  "y":  "4 linear auditable migrations plus cascade deletes verified by ORM and raw-SQL tests",
+                                                  "z":  "writing explicit Alembic revisions with named constraints and enforcing foreign keys on SQLite"
+                                              },
+                                              {
+                                                  "bullet":  "Built a voice-first accessible UI (skip links, aria-live transcripts, Ctrl/Cmd+Space hotkey, keyboard-operable everything, reduced-motion respect) verified by 19 Jest tests including screen-reader announcements.",
+                                                  "x":  "Built a voice-first accessible UI",
+                                                  "y":  "landmarks, live regions, hotkeys, and focus states all covered by 19 Jest tests",
+                                                  "z":  "implementing semantic ARIA patterns across 4 pages and 6 components with Testing Library verification"
+                                              },
+                                              {
+                                                  "bullet":  "Made timers actually work in a stateless API by spawning daemon threads that sleep then flip status and write DB logs, with active-timer listing filtered per user.",
+                                                  "x":  "Made voice timers work in a stateless API",
+                                                  "y":  "timers fire, complete, log to DB, and list per user without any scheduler infra",
+                                                  "z":  "spawning daemon threads with completion callbacks and per-user active-timer filtering"
+                                              },
+                                              {
+                                                  "bullet":  "Protected secrets end to end (Google tokens travel in a single header, never query/body; OAuth failures log server-side with generic client messages; example secrets flagged at boot) across a 4-scope Calendar OAuth flow.",
+                                                  "x":  "Protected secrets end to end across Google OAuth",
+                                                  "y":  "tokens header-only, no secret ever leaks to logs/history/proxies, 4 scopes least-privilege",
+                                                  "z":  "designing header-only token transport, silent server-side error logging, and boot-time placeholder detection"
+                                              },
+                                              {
+                                                  "bullet":  "Sped up the hot paths with fast ISO8601 parsing (~1.4-1.8x), pre-compiled regexes across all parsers, and memoized dashboard aggregation, all noted in a 12-entry performance journal.",
+                                                  "x":  "Sped up every hot path",
+                                                  "y":  "ISO parsing ~1.4-1.8x faster, zero per-request regex recompiles, memoized dashboard",
+                                                  "z":  "fast-path datetime parsing, module-level pre-compiled patterns, and single-pass memoized aggregation"
+                                              },
+                                              {
+                                                  "bullet":  "Found free meeting time in one question (\u0027when am I free?\u0027) by scanning 9-to-5 in the user\u0027s timezone against Google freebusy data and returning gaps with durations.",
+                                                  "x":  "Answered \u0027when am I free?\u0027 in one question",
+                                                  "y":  "9-to-5 scan in user timezone with gap durations, capped and formatted for speech",
+                                                  "z":  "querying Google freebusy and computing free gaps server-side"
+                                              },
+                                              {
+                                                  "bullet":  "Degraded gracefully everywhere (no AI key: heuristic parser + text replies; TTS down: text with error flag; Google disconnected: auth-required action with connect button) so the app never dead-ends.",
+                                                  "x":  "Made the app never dead-end without keys or connectivity",
+                                                  "y":  "works keyless via heuristics; every failure returns a spoken/text fallback, never a blank screen",
+                                                  "z":  "layering heuristic fallbacks, TTS degradation flags, and auth-required actions with reconnect buttons"
+                                              },
+                                              {
+                                                  "bullet":  "Documented like a product (362-line README with architecture diagrams, 14-row API table, env table, ER diagram, roadmap) plus real running-app screenshots, so anyone can run it in two commands.",
+                                                  "x":  "Documented like a product, not a homework repo",
+                                                  "y":  "362-line README, 14-row API reference, ER diagram, real screenshots, two-command quickstart",
+                                                  "z":  "writing full architecture, API, env, and testing docs with diagrams and assets"
+                                              },
+                                              {
+                                                  "bullet":  "Proved correctness with 122 tests (103 pytest + 19 Jest) covering auth conflicts, calendar isolation, validation bounds, cascade deletes, datetime edge cases, TTS caching, and voice routing.",
+                                                  "x":  "Proved correctness with 122 tests",
+                                                  "y":  "103 backend + 19 frontend tests covering auth, isolation, validation, parsing, caching, routing",
+                                                  "z":  "writing isolated tmp-DB backend suites plus mocked-API frontend suites with media mocks"
+                                              },
+                                              {
+                                                  "bullet":  "Handled the world\u0027s timezones correctly (per-user IANA zones, UTC-normalized storage, midnight all-day events, unknown-zone fallback to UTC) with 9 dedicated timezone tests.",
+                                                  "x":  "Handled the world\u0027s timezones correctly",
+                                                  "y":  "per-user zones, UTC-normalized storage, all-day support, 9 timezone tests incl. frozen-clock",
+                                                  "z":  "validating ZoneInfo at the API boundary and normalizing every datetime to naive UTC"
+                                              },
+                                              {
+                                                  "bullet":  "Gave the assistant a memory (notes persisted per user up to 10,000 chars, reminders with IDs, background timers, DB log of every command) behind a 6-page-equivalent React shell with protected routes.",
+                                                  "x":  "Gave the assistant a persistent memory",
+                                                  "y":  "notes, reminders, timers, and full command logs stored per user behind auth",
+                                                  "z":  "adding Note/Log models, reminder/timer state, and per-command DB logging"
+                                              },
+                                              {
+                                                  "bullet":  "Kept the codebase honest (stale arch doc flagged, roadmap lists what is NOT built: SendGrid, FCM, RBAC, Docker) and maintained a 12-entry perf journal plus a security-fix log across the build.",
+                                                  "x":  "Kept the codebase honest and reviewable",
+                                                  "y":  "stale docs flagged, unbuilt scope listed, perf and security decisions journaled",
+                                                  "z":  "maintaining a performance journal, security-fix log, and explicit roadmap of omissions"
+                                              },
+                                              {
+                                                  "bullet":  "Released under MIT with 17 PRs of history, Google-OAuth single-tap calendar connect, and split-screen auth screens that work on mobile, making the whole system demoable in minutes.",
+                                                  "x":  "Released a demoable MIT-licensed product",
+                                                  "y":  "one-tap Google connect, mobile-ready auth, split-screen onboarding, minutes to demo",
+                                                  "z":  "polishing onboarding UX, OAuth UX, responsive layouts, and licensing for reuse"
+                                              }
+                                          ]
+                      },
+                      {
+                          "architecture":  "Next.js 14 App Router SPA (Zustand + TanStack Query + Recharts) -\u003e edge-rewritten /api/v1/* to Express 4 + Prisma 6 + PostgreSQL 15 API; NextAuth (Credentials+Google) bridges to backend JWT via timing-safe internal secret; Gemini 2.0 Flash proxy for coaching/games; Vercel frontend + Render backend + Render Postgres",
+                          "dates":  "Oct 2025 - Sep 2026 (created 2025-10-16, 626 commits, MIT, live in production)",
+                          "evidence":  [
+                                           "apps/backend/prisma/schema.prisma (283 lines, 13 models, 26 index/unique directives)",
+                                           "apps/backend/src/routes/*.ts (39 handlers + /health = 40 endpoints)",
+                                           "apps/frontend/src/components/TypingTest.tsx (394 lines, memoized 60fps engine)",
+                                           "apps/frontend/src/components/games/ (WordBlitz/PromptDash/StoryChain)",
+                                           "apps/backend/src/controllers/assessment.controller.ts (343 lines, placement thresholds)",
+                                           "apps/backend/src/controllers/mistake.controller.ts (329 lines, analytics pipeline)",
+                                           "apps/backend/src/middleware/rate-limiter.ts (3-tier + AI limiter)",
+                                           "apps/backend/src/middleware/auth.middleware.ts (SHA-256 timingSafeEqual bridge)",
+                                           ".github/workflows/ci.yml (198 lines, 5 jobs + Postgres service)",
+                                           "apps/backend/Dockerfile (40 lines, 3-stage non-root)",
+                                           "packages/shared/src/achievements.ts (214 lines, 20 achievement types)",
+                                           "CHANGELOG.md (270 lines, v1.0.0 + v2.0.0 milestones)",
+                                           "lib/textGenerator.ts (494 lines, 12-template bank)",
+                                           "components/SkillTreeVisualization.tsx (323 lines), PracticeHeatMap.tsx (220 lines)"
+                                       ],
+                          "id":  "type-master",
+                          "keywords":  [
+                                           "Next.js",
+                                           "React",
+                                           "TypeScript",
+                                           "Express",
+                                           "Prisma",
+                                           "PostgreSQL",
+                                           "NextAuth",
+                                           "Gemini",
+                                           "Zustand",
+                                           "TanStack Query",
+                                           "Zod",
+                                           "JWT",
+                                           "Redis",
+                                           "Docker",
+                                           "CI/CD",
+                                           "Recharts"
+                                       ],
+                          "live_url":  "https://typemaster-frontend.vercel.app",
+                          "llm_brief":  "Flagship gamified typing platform, live in production with 626 commits: Next.js 14 + TypeScript frontend (real-time 60fps typing engine, visual keyboard, 3D hand model, skill tree, heatmaps, 3 AI mini-games) on an Express 4 + Prisma 6 + PostgreSQL 15 backend with 40 REST endpoints, 13 tables, NextAuth-to-JWT bridge auth, 3-tier rate limiting, Gemini AI coaching, leaderboards, 20 achievements, full CI with Postgres service, and Dockerized Render deploys.",
+                          "metrics":  {
+                                          "achievements":  20,
+                                          "ai_rate_limit":  "10 req/min",
+                                          "ci_jobs":  5,
+                                          "commits":  626,
+                                          "curriculum":  "~260-300 lessons across 13 sections",
+                                          "db_models":  13,
+                                          "index_unique_directives":  26,
+                                          "jwt":  "15m access + 7d refresh, bcrypt cost 12",
+                                          "placement_thresholds":  "70wpm/98% EXPERT, 55/97 ADVANCED, 40/95 INTERMEDIATE",
+                                          "rest_endpoints":  40,
+                                          "typing_modes":  "30/60/180s"
+                                      },
+                          "name":  "Type-Master",
+                          "repo_url":  "https://github.com/chirag-gupta7/Type-Master",
+                          "role":  "Sole builder (full-stack + AI + DevOps)",
+                          "stack":  [
+                                        "Next.js 14",
+                                        "React 18",
+                                        "TypeScript 5",
+                                        "Tailwind CSS",
+                                        "Framer Motion",
+                                        "Zustand",
+                                        "TanStack Query",
+                                        "Recharts",
+                                        "Express 4",
+                                        "Prisma 6",
+                                        "PostgreSQL 15",
+                                        "Redis 7",
+                                        "NextAuth",
+                                        "Zod",
+                                        "JWT",
+                                        "Gemini 2.0 Flash",
+                                        "Docker",
+                                        "GitHub Actions",
+                                        "Vercel",
+                                        "Render"
+                                    ],
+                          "tagline":  "Gamified typing platform with AI coaching - live in production",
+                          "type":  "flagship project",
+                          "xyz_bullets":  [
+                                              {
+                                                  "bullet":  "Shipped a live production typing platform (frontend on Vercel, API + Postgres on Render) across 626 commits, serving real users with 40 REST endpoints, 13 tables, and full CI that stays green.",
+                                                  "x":  "Shipped a live production typing platform",
+                                                  "y":  "626 commits, 40 endpoints, 13 tables, green CI, real production URL",
+                                                  "z":  "building Next.js + Express + Prisma + Postgres end to end with Vercel/Render deploys"
+                                              },
+                                              {
+                                                  "bullet":  "Made every keystroke render at 60fps with zero lag by memoizing word components, splitting text once, and computing stats in a single O(N) pass behind a hidden-input capture engine.",
+                                                  "x":  "Made every keystroke render at 60fps with zero lag",
+                                                  "y":  "memoized rendering, single-pass stats, locked-word backspace model, spring progress bar",
+                                                  "z":  "engineering a hidden-input capture engine with memoized components and O(N) metrics"
+                                              },
+                                              {
+                                                  "bullet":  "Taught typing with a 260-300 lesson curriculum across 13 sections (foundation to Python/Java/C++/code syntax to speed drills) with unlock states, checkpoints, stars, and target fingers per lesson.",
+                                                  "x":  "Taught typing with a 260-300 lesson curriculum",
+                                                  "y":  "13 sections, checkpoints, 0-3 stars, per-lesson target fingers and WPM gates",
+                                                  "z":  "seeding leveled lessons with unlock-after chains and server-built unlock states"
+                                              },
+                                              {
+                                                  "bullet":  "Placed every learner at the right level (BEGINNER to EXPERT with section unlocks) from one assessment, using exact gates: 70wpm/98% EXPERT, 55/97 ADVANCED, 40/95 INTERMEDIATE.",
+                                                  "x":  "Placed every learner at the right level from one assessment",
+                                                  "y":  "exact WPM/accuracy gates routing to lesson levels 1/21/41/61 with section unlocks",
+                                                  "z":  "building a 25-sentence assessment with threshold routing and finger-speed diagnostics"
+                                              },
+                                              {
+                                                  "bullet":  "Turned mistakes into coaching by logging per-keystroke errors (key pressed vs expected + finger used), aggregating weak keys server-side, and auto-generating personalized drill content from your top-5 weak keys.",
+                                                  "x":  "Turned mistakes into personalized coaching",
+                                                  "y":  "per-finger analytics, weak-key rankings, auto-generated drills from top-5 weak keys",
+                                                  "z":  "logging mistakes via API, aggregating with transactions, and generating targeted practice content"
+                                              },
+                                              {
+                                                  "bullet":  "Made cheating pointless by capping WPM at 300, scores at 1M, and batch sizes at 1,000 across tests, lessons, games, and assessments with Zod rejecting the rest.",
+                                                  "x":  "Made cheating pointless",
+                                                  "y":  "WPM capped at 300 and every numeric bound enforced on 4 submission surfaces",
+                                                  "z":  "enforcing anti-cheat ceilings with per-route Zod schemas"
+                                              },
+                                              {
+                                                  "bullet":  "Built 3 AI mini-games on Gemini 2.0 Flash (WordBlitz timed combos, PromptDash AI prompt racing with writing feedback, StoryChain collaborative storytelling) behind a 10 req/min rate-limited proxy with 10s timeouts.",
+                                                  "x":  "Built 3 AI mini-games on Gemini 2.0 Flash",
+                                                  "y":  "timed combos, AI-prompt racing, collaborative storytelling, all rate-limited and timeout-guarded",
+                                                  "z":  "proxying Gemini through a validated backend with per-feature prompts and feedback loops"
+                                              },
+                                              {
+                                                  "bullet":  "Secured auth with a NextAuth-to-backend-JWT bridge that hashes both sides of the internal secret and compares in constant time, plus 15-minute access / 7-day refresh tokens and bcrypt cost 12.",
+                                                  "x":  "Secured auth with a timing-attack-proof token bridge",
+                                                  "y":  "SHA-256 + timingSafeEqual comparison, 15m/7d token rotation, bcrypt-12 passwords",
+                                                  "z":  "bridging NextAuth (Credentials + Google) to backend JWT with constant-time secret checks"
+                                              },
+                                              {
+                                                  "bullet":  "Survived the internet with 3-tier rate limiting (1000/15min global, 30/15min auth skipping successes to block credential-stuffing fan-out, 10/min AI) plus helmet, CORS allowlists with Vercel-preview matching, and Zod on every route.",
+                                                  "x":  "Survived the internet with layered defenses",
+                                                  "y":  "3-tier rate limits, helmet headers, preview-safe CORS, per-route validation, masked 500s",
+                                                  "z":  "layering express-rate-limit tiers, helmet, origin matching, Zod schemas, and Winston error handling"
+                                              },
+                                              {
+                                                  "bullet":  "Ranked players fairly with deduped leaderboards (best score per player via groupBy, tie-broken by recency) plus personal bests, history, and global baselines across 5 game types.",
+                                                  "x":  "Ranked players fairly at scale",
+                                                  "y":  "one row per player, recency tie-breaks, personal bests + history + global stats",
+                                                  "z":  "aggregating scores with groupBy leaderboards and parallel global-baseline queries"
+                                              },
+                                              {
+                                                  "bullet":  "Kept players hooked with 20 achievements across 6 categories, 500-piece confetti unlocks, toasts, milestone celebrations, streaks, and a 365-day LeetCode-style activity heatmap.",
+                                                  "x":  "Kept players hooked with game-grade retention systems",
+                                                  "y":  "20 achievements, confetti unlocks, streaks, 365-day heatmap with current/longest streak math",
+                                                  "z":  "building a shared achievement engine with fire-and-forget awarding and rich frontend celebrations"
+                                              },
+                                              {
+                                                  "bullet":  "Visualized mastery with a skill tree (linear/tree modes, bezier edges, tier pagination), WPM history charts, circular progress, and a composite learning dashboard with skeleton anti-shift loading.",
+                                                  "x":  "Visualized mastery players can feel",
+                                                  "y":  "skill tree, WPM charts, heatmaps, and dashboard with skeleton loading and empty states",
+                                                  "z":  "composing Recharts + custom SVG visualizations over dedicated progress endpoints"
+                                              },
+                                              {
+                                                  "bullet":  "Queried fast with 26 index/unique directives (composite keys on hot paths like user+createdAt, game+score desc) and parallel Promise.all reads plus DB-side aggregates instead of app-side loops.",
+                                                  "x":  "Queried fast on every hot path",
+                                                  "y":  "26 indexes/uniques, parallel reads, DB-side aggregation, O(N^2) fixes to O(N)",
+                                                  "z":  "designing composite Prisma indexes and offloading aggregation with groupBy/aggregate"
+                                              },
+                                              {
+                                                  "bullet":  "Tested like production (backend Jest+Supertest, frontend Jest+RTL with a11y regression tests, Postgres service in CI, coverage upload) with WCAG-AA contrast, keyboard shortcuts, and reduced-motion support.",
+                                                  "x":  "Tested like production",
+                                                  "y":  "backend + frontend suites, real Postgres in CI, a11y regression tests, AA contrast",
+                                                  "z":  "running Jest/Supertest/RTL suites in a 5-job CI pipeline with coverage reporting"
+                                              },
+                                              {
+                                                  "bullet":  "Deployed boringly and reliably (3-stage non-root Docker image, migrate-then-serve boot, 5-minute health pings, one-command compose with Postgres + Redis healthchecks) across Vercel and Render.",
+                                                  "x":  "Deployed boringly and reliably",
+                                                  "y":  "non-root images, migrate-on-boot, 5-min health pings, one-command local stack",
+                                                  "z":  "containerizing with multi-stage Dockerfiles, compose healthchecks, and cron health monitoring"
+                                              },
+                                              {
+                                                  "bullet":  "Taught fingers, not just keys, with an interactive 5-row visual keyboard (home-row markers, per-key states) and a 3D hand model highlighting the exact finger for the next keypress.",
+                                                  "x":  "Taught fingers, not just keys",
+                                                  "y":  "60-key visual keyboard with states plus color-coded 3D hand with pressure guides",
+                                                  "z":  "building interactive keyboard and SVG hand components wired to the live typing engine"
+                                              },
+                                              {
+                                                  "bullet":  "Cached smartly with a 5-minute TTL session cache namespaced per user (guest-isolated), killing repeat fetches for lessons, progress, and leaderboards.",
+                                                  "x":  "Killed repeat fetches with smart caching",
+                                                  "y":  "5-min TTL per-user-namespaced cache across hot read endpoints",
+                                                  "z":  "implementing a token-scoped sessionStorage cache with TTL expiry"
+                                              },
+                                              {
+                                                  "bullet":  "Seeded a living demo (15 demo bots with realistic score distributions plus per-user tests) and 9 real-app screenshots plus 5 architecture diagrams, so evaluators see a product, not a skeleton.",
+                                                  "x":  "Seeded a living demo evaluators can feel",
+                                                  "y":  "realistic demo data, 9 screenshots, 5 architecture diagrams, 18-doc docs folder",
+                                                  "z":  "writing multi-file seeders and capturing real-app visuals with full documentation"
+                                              },
+                                              {
+                                                  "bullet":  "Grew the product in public (CHANGELOG v1.0.0 to v2.0.0: 14 to 100+ lessons, 15 to 27+ endpoints, achievements system, assessment engine) with contributor docs, agent instructions, and a 40-rule lint/test/typecheck gate on every PR.",
+                                                  "x":  "Grew the product in public with engineering discipline",
+                                                  "y":  "versioned changelog, contributor guide, lint+typecheck+test gate on every PR",
+                                                  "z":  "maintaining CHANGELOG, CONTRIBUTING, AGENTS.md, and CI quality gates"
+                                              },
+                                              {
+                                                  "bullet":  "Stayed honest about drift (docs/API.md flagged stale where it omits endpoints, vercel.json contradicts the README build command, Docker Node 18 vs engines 20 noted) instead of hiding inconsistencies.",
+                                                  "x":  "Stayed honest about drift instead of hiding it",
+                                                  "y":  "stale docs and version mismatches flagged explicitly in the audit trail",
+                                                  "z":  "auditing docs against code and recording every inconsistency found"
+                                              }
+                                          ]
+                      },
+                      {
+                          "architecture":  "Zero-build static site (HTML + Tailwind + vanilla JS + Chart.js) on Vercel static hosting; documented serverless Gemini proxy design (/api/gemini) with env-key isolation; research paper PDF bundled; deployment notebook included",
+                          "dates":  "2026 (shipped; \u0027Premium redesign: deep dark theme, all features interactive, offline-first\u0027 2026-09-08; live on Vercel)",
+                          "evidence":  [
+                                           "public/index.html (461 lines, 9 sections, ARIA roles/labels)",
+                                           "public/script.js (526 lines: NÃ—M canvas, inspector sim, CVE/poison demos, charts, quiz)",
+                                           "public/style.css (357 lines, themes + animations)",
+                                           "README.md (461 lines: 6 research sections, API spec, security, deployment)",
+                                           "public/MCP research paper.pdf (212KB, bundled source)",
+                                           "MCP_Vercel_Deployment.ipynb (Vercel routes vs cleanUrls guide)",
+                                           "vercel.json (15 lines, static routes)",
+                                           "package.json (mcp-research-website 1.0.0, MIT, node 22.x)",
+                                           "Live URL in README"
+                                       ],
+                          "id":  "mcp-website",
+                          "keywords":  [
+                                           "Model Context Protocol",
+                                           "Anthropic",
+                                           "Gemini 2.5 Flash",
+                                           "Vercel",
+                                           "Tailwind",
+                                           "Chart.js",
+                                           "Canvas",
+                                           "CVE-2025-6514",
+                                           "RAG",
+                                           "JSON-RPC",
+                                           "serverless",
+                                           "technical writing"
+                                       ],
+                          "live_url":  "https://mcp-website-8yyunk5n6-chirag-gupta7s-projects.vercel.app",
+                          "llm_brief":  "Interactive research website presenting original Model Context Protocol research, live on Vercel: 9-section deep-dive (history, architecture, security incl. CVE-2025-6514, benchmarks, ecosystem, protocols, quiz) with an animated NÃ—M integration canvas, a step-through MCP inspector simulator, interactive attack demos (CVE + tool poisoning) with hardening toggles, Chart.js benchmark charts, protocol comparison tabs, a self-scoring quiz, offline summarization, persistent dark/light themes, and full mobile + ARIA accessibility. Zero-build static deploy; Gemini proxy API documented as the designed backend.",
+                          "metrics":  {
+                                          "charts":  2,
+                                          "html_lines":  461,
+                                          "js_lines":  526,
+                                          "live":  true,
+                                          "quiz":  "self-scoring with restart",
+                                          "research_paper_kb":  212,
+                                          "research_sections":  9,
+                                          "summarize_buttons":  4
+                                      },
+                          "name":  "MCP-Website",
+                          "repo_url":  "https://github.com/chirag-gupta7/MCP-Website",
+                          "role":  "Sole builder (research + design + engineering)",
+                          "stack":  [
+                                        "HTML5",
+                                        "Tailwind CSS",
+                                        "Vanilla JavaScript",
+                                        "Chart.js",
+                                        "Canvas",
+                                        "Node.js + Express (documented proxy design)",
+                                        "Google Gemini 2.5 Flash (documented integration)",
+                                        "Vercel static + serverless"
+                                    ],
+                          "tagline":  "Interactive MCP research site with simulators and demos - live on Vercel",
+                          "type":  "flagship project",
+                          "xyz_bullets":  [
+                                              {
+                                                  "bullet":  "Published original MCP research as a live interactive website on Vercel, turning a 212KB research paper into 9 browsable sections people actually explore.",
+                                                  "x":  "Published original MCP research as a live interactive website",
+                                                  "y":  "9 sections live on Vercel from a 212KB bundled research paper",
+                                                  "z":  "designing and shipping a zero-build static research site with docs and deployment guide"
+                                              },
+                                              {
+                                                  "bullet":  "Made the NÃ—M integration problem click instantly with an animated canvas diagram (models-to-tools edges, packet flow, before/after toggle) instead of paragraphs.",
+                                                  "x":  "Made the NÃ—M integration problem click instantly",
+                                                  "y":  "animated canvas with packet flow and a before/after MCP complexity toggle",
+                                                  "z":  "hand-rolling a canvas visualization with animation loop and toggle control"
+                                              },
+                                              {
+                                                  "bullet":  "Let visitors run MCP, not just read about it, with a step-through inspector simulator (run/step/reset plus a patched-mode toggle showing hardened behavior).",
+                                                  "x":  "Let visitors run MCP instead of just reading about it",
+                                                  "y":  "step-through inspector with run/step/reset and patched-mode comparison",
+                                                  "z":  "building a client-side protocol inspector simulator with logging console"
+                                              },
+                                              {
+                                                  "bullet":  "Turned CVE-2025-6514 and tool-poisoning attacks into clickable demos with hardening checkboxes, so the threat landscape is felt, not skimmed.",
+                                                  "x":  "Turned headline vulnerabilities into clickable demos",
+                                                  "y":  "CVE + tool-poisoning walkthroughs with hardening toggles showing mitigations",
+                                                  "z":  "scripting interactive attack demos paired with defense checklists"
+                                              },
+                                              {
+                                                  "bullet":  "Made benchmarks explorable with Chart.js success-rate and ecosystem-quality charts plus toggle filters, grounded in the MCP-Universe 43.72% baseline finding.",
+                                                  "x":  "Made benchmarks explorable instead of static tables",
+                                                  "y":  "toggleable charts built on the 43.72% baseline success-rate finding",
+                                                  "z":  "rendering Chart.js visualizations with theme-aware refresh and filter toggles"
+                                              },
+                                              {
+                                                  "bullet":  "Compared transports and protocols side by side with interactive comparison cards and tabs, compressing a sprawling spec debate into one screen.",
+                                                  "x":  "Compressed the protocol debate into one screen",
+                                                  "y":  "side-by-side transport/protocol cards with tabbed comparison",
+                                                  "z":  "designing interactive comparison components with ARIA tab semantics"
+                                              },
+                                              {
+                                                  "bullet":  "Tested readers with a self-scoring quiz engine (instant feedback, score tracking, one-click restart with toast) covering the research content.",
+                                                  "x":  "Tested readers with a self-scoring quiz",
+                                                  "y":  "instant per-question feedback, running score, restart flow",
+                                                  "z":  "building a dependency-free quiz engine with state management and toast notifications"
+                                              },
+                                              {
+                                                  "bullet":  "Summarized dense sections offline in one click (4 section summarize buttons) with zero API cost or latency, keeping the site fully usable without keys.",
+                                                  "x":  "Summarized dense sections in one click with zero API cost",
+                                                  "y":  "4 offline summarize buttons, no keys, no latency, no quota",
+                                                  "z":  "implementing client-side extractive summarization per section"
+                                              },
+                                              {
+                                                  "bullet":  "Designed the Gemini backend properly on paper (POST /api/gemini proxy, GET /api/health, env-isolated keys, CORS, input validation, sanitized errors, exponential-backoff retries) even though the shipped artifact is static-first.",
+                                                  "x":  "Designed the AI backend properly on paper",
+                                                  "y":  "full proxy spec: key isolation, validation, sanitized errors, retry logic",
+                                                  "z":  "specifying REST endpoints, security rules, and reliability patterns in documentation"
+                                              },
+                                              {
+                                                  "bullet":  "Shipped premium dark-first aesthetics (persistent theme toggle, brand gradients, scroll-reveal animations, animated counters, sticky scroll-spy nav, mobile menu) that feel designed, not defaulted.",
+                                                  "x":  "Shipped premium dark-first aesthetics",
+                                                  "y":  "persistent themes, scroll-spy nav, reveal animations, animated counters, mobile menu",
+                                                  "z":  "hand-crafting 357 lines of CSS plus IntersectionObserver-driven interactions"
+                                              },
+                                              {
+                                                  "bullet":  "Reached every device and reader (mobile-first responsive grid, touch-sized targets, ARIA labels/roles, keyboard navigation, semantic HTML) with zero frameworks.",
+                                                  "x":  "Reached every device and reader with zero frameworks",
+                                                  "y":  "mobile-first responsive plus ARIA roles, labels, and keyboard paths throughout",
+                                                  "z":  "building on semantic HTML + vanilla JS with accessibility baked into every component"
+                                              },
+                                              {
+                                                  "bullet":  "Quantified the story with hard numbers (90% expected adoption, 5,000+ servers, 43.72% benchmark baseline, 50-75% enterprise time savings, 10% early ROI, $1.2B-to-$4.5B market) instead of hype.",
+                                                  "x":  "Quantified the MCP story with hard numbers",
+                                                  "y":  "adoption, server counts, benchmark baselines, ROI, and market sizing cited",
+                                                  "z":  "researching and presenting quantitative ecosystem metrics with sources"
+                                              },
+                                              {
+                                                  "bullet":  "Covered the full threat model (tool poisoning, rug pulls, ETDI measures, enterprise recommendations) alongside real deployments (Block\u0027s Goose, IDE integration, scientific computing, forensics).",
+                                                  "x":  "Covered the full threat model plus real deployments",
+                                                  "y":  "attack vectors, mitigations, and 4+ production use-case classes documented",
+                                                  "z":  "researching CVEs, attack taxonomies, defenses, and enterprise case studies"
+                                              },
+                                              {
+                                                  "bullet":  "Deployed with zero build step (static Vercel hosting, 15-line vercel.json, Node 22 engine pin, one dependency) plus a notebook teaching routes-vs-cleanUrls deployment.",
+                                                  "x":  "Deployed with zero build step",
+                                                  "y":  "static hosting, 15-line config, 1 dependency, live URL, deployment notebook",
+                                                  "z":  "configuring Vercel static routes and documenting deployment approaches in a guide notebook"
+                                              },
+                                              {
+                                                  "bullet":  "Wrote 461 lines of documentation covering setup, API spec, security practices, troubleshooting (5 issues + fixes), performance playbook, and customization guides for students and builders.",
+                                                  "x":  "Wrote documentation students can actually learn from",
+                                                  "y":  "setup, API, security, 5-issue troubleshooting guide, perf playbook, customization paths",
+                                                  "z":  "documenting for web-dev students, AI integrators, and research presenters separately"
+                                              },
+                                              {
+                                                  "bullet":  "Showcased full-stack security thinking (env keys, backend proxy, gitignore discipline, CORS, validation, error sanitization, env isolation) as a checklist the project itself follows.",
+                                                  "x":  "Showcased full-stack security thinking",
+                                                  "y":  "7-practice security checklist the project itself follows and documents",
+                                                  "z":  "applying and documenting key isolation, proxy architecture, and safe error handling"
+                                              },
+                                              {
+                                                  "bullet":  "Linked the research to the builder\u0027s own credentials (FRACTAL MCP Mastery certification) and live social profiles in the sticky header, closing the loop between learning and shipping.",
+                                                  "x":  "Closed the loop between learning and shipping",
+                                                  "y":  "certification, research paper, and live site all cross-linked in one artifact",
+                                                  "z":  "connecting credentials, source research, and the shipped site with profile links"
+                                              },
+                                              {
+                                                  "bullet":  "Kept every interaction dependency-free and fast (no heavy frameworks, optimized animations, efficient CSS) so the whole experience loads instantly on phones.",
+                                                  "x":  "Kept everything dependency-free and instant",
+                                                  "y":  "vanilla JS throughout, fast load on phones, smooth 60fps-class animations",
+                                                  "z":  "refusing heavy frameworks in favor of hand-tuned vanilla interactions"
+                                              },
+                                              {
+                                                  "bullet":  "Structured content for skimmers and divers alike (sticky headers, active-section highlighting, smooth scrolling, card grids, SVG diagrams, charts, quiz) across history, architecture, security, benchmarks, ecosystem, and applications.",
+                                                  "x":  "Structured deep research for skimmers and divers alike",
+                                                  "y":  "9 sections navigable in seconds yet deep enough for study, all cross-linked",
+                                                  "z":  "architecting information hierarchy with sticky nav, highlights, and mixed media"
+                                              },
+                                              {
+                                                  "bullet":  "Acknowledged sources properly (Anthropic\u0027s MCP work, Google\u0027s Gemini API, open-source tooling) with MIT licensing, making the site a citable community resource.",
+                                                  "x":  "Made the site a citable community resource",
+                                                  "y":  "sources credited, MIT licensed, reusable as a teaching reference",
+                                                  "z":  "crediting origins and licensing openly for education and reuse"
+                                              }
+                                          ]
+                      },
+                      {
+                          "architecture":  "Single-file-layered FastAPI monolith (main.py routes + auth dependency, models.py ORM, schema.py Pydantic v2, security.py crypto, database.py session) on SQLite; pytest suite with isolated test DB via dependency overrides; make_admin.py for role promotion; Swagger UI auto-docs",
+                          "dates":  "2026 (11 commits; roadmap already records the get-by-id auth fix as Done and shipped)",
+                          "evidence":  [
+                                           "TaskLogin-Manager main.py (147 lines, 9 endpoints incl. fixed get-by-id)",
+                                           "security.py (21 lines: bcrypt + HS256 JWT, 30-min expiry)",
+                                           "models.py (20 lines: User/Task with owner FK)",
+                                           "schema.py (31 lines: Pydantic v2 bounds)",
+                                           "test_main.py (132 lines, 8 tests)",
+                                           "Readme.md (auth flow, roles, known limitations, roadmap)",
+                                           "make_admin.py (admin promotion script)",
+                                           "database.py (engine/session)",
+                                           "testing.py"
+                                       ],
+                          "id":  "tasklogin-manager",
+                          "keywords":  [
+                                           "FastAPI",
+                                           "JWT",
+                                           "Bcrypt",
+                                           "RBAC",
+                                           "Pydantic v2",
+                                           "SQLAlchemy",
+                                           "SQLite",
+                                           "pytest",
+                                           "TestClient",
+                                           "Swagger",
+                                           "auth",
+                                           "ownership"
+                                       ],
+                          "live_url":  null,
+                          "llm_brief":  "TaskFlow API (repo TaskLogin-Manager): a task-management REST API in FastAPI demonstrating production auth patterns - bcrypt password hashing, 30-minute HS256 JWTs, per-user task ownership, and admin RBAC bypass, all guarded by Pydantic v2 validation and centralized error handlers, proven by 8 pytest tests on a fully isolated test database (including a cross-user hijack attempt rejected with 403). Swagger docs included; known limitations honestly listed with a roadmap.",
+                          "metrics":  {
+                                          "auth_expiry_minutes":  30,
+                                          "db_models":  2,
+                                          "endpoints":  9,
+                                          "jwt_algorithm":  "HS256",
+                                          "password_min_length":  8,
+                                          "tests":  8,
+                                          "title_bounds":  "1-100 chars",
+                                          "username_bounds":  "3-20 chars"
+                                      },
+                          "name":  "TaskLogin-Manager (TaskFlow API)",
+                          "repo_url":  "https://github.com/chirag-gupta7/TaskLogin-Manager",
+                          "role":  "Sole builder (backend)",
+                          "stack":  [
+                                        "FastAPI",
+                                        "SQLAlchemy",
+                                        "SQLite",
+                                        "python-jose (JWT)",
+                                        "passlib + bcrypt",
+                                        "Pydantic v2",
+                                        "pytest + TestClient (httpx)",
+                                        "Uvicorn",
+                                        "Swagger UI"
+                                    ],
+                          "tagline":  "Task management API with JWT auth and role-based access control",
+                          "type":  "flagship project",
+                          "xyz_bullets":  [
+                                              {
+                                                  "bullet":  "Shipped task management with real multi-user isolation (you only ever see your own tasks) enforced at the query layer on every read, proven by a two-user isolation test.",
+                                                  "x":  "Shipped task management with real multi-user isolation",
+                                                  "y":  "owner-filtered queries on every read, proven by a two-user isolation test",
+                                                  "z":  "filtering all task reads by owner_id with TestClient verification"
+                                              },
+                                              {
+                                                  "bullet":  "Blocked a live hijack attempt in tests (user B editing user A\u0027s task gets 403, not a silent overwrite) by checking owner-or-admin on every mutation.",
+                                                  "x":  "Blocked cross-user task hijacking",
+                                                  "y":  "foreign updates rejected with 403, covered by a dedicated hijack test",
+                                                  "z":  "enforcing owner-or-admin checks on update, delete, and single-task fetch"
+                                              },
+                                              {
+                                                  "bullet":  "Gave admins real power without self-promotion holes (admins bypass ownership; no endpoint can grant admin; promotion only via a local script) by design.",
+                                                  "x":  "Gave admins real power without self-promotion holes",
+                                                  "y":  "admin bypass works, privilege escalation via API impossible",
+                                                  "z":  "defaulting new users to \u0027user\u0027 and promoting only through make_admin.py"
+                                              },
+                                              {
+                                                  "bullet":  "Never stored a plain-text password (bcrypt hashing on register, constant-time verify on login, generic 401s that don\u0027t reveal which field was wrong).",
+                                                  "x":  "Never stored or leaked a plain-text password",
+                                                  "y":  "bcrypt hashes only; identical 401s for bad user vs bad password",
+                                                  "z":  "hashing with passlib-bcrypt and returning uniform invalid-credential errors"
+                                              },
+                                              {
+                                                  "bullet":  "Issued short-lived 30-minute HS256 JWTs via a standard Bearer flow that plugs straight into Swagger\u0027s Authorize button for one-click manual testing.",
+                                                  "x":  "Issued short-lived JWTs with one-click Swagger testing",
+                                                  "y":  "30-min expiring tokens, Bearer scheme, Authorize-button compatible",
+                                                  "z":  "signing HS256 tokens with exp claims and HTTPBearer decoding per request"
+                                              },
+                                              {
+                                                  "bullet":  "Rejected bad input at the door (titles 1-100 chars, descriptions capped at 500, usernames 3-20, valid emails, 8+ char passwords) with Pydantic v2 before any DB touch.",
+                                                  "x":  "Rejected bad input at the door",
+                                                  "y":  "length, format, and email rules enforced pre-database with 422 details",
+                                                  "z":  "validating every request with Pydantic v2 Field bounds and EmailStr"
+                                              },
+                                              {
+                                                  "bullet":  "Returned errors clients can actually handle (simplified 422 field/message pairs; global 500s sanitized to one safe sentence) with zero stack-trace leaks.",
+                                                  "x":  "Returned errors clients can actually handle",
+                                                  "y":  "structured 422s, sanitized 500s, zero stack-trace leaks",
+                                                  "z":  "adding centralized exception handlers for validation and unexpected errors"
+                                              },
+                                              {
+                                                  "bullet":  "Fixed the known unprotected get-by-id endpoint (anyone could fetch any task) and recorded it Done on the roadmap, closing the last auth gap.",
+                                                  "x":  "Fixed the last auth gap in the API",
+                                                  "y":  "get-by-id now owner-checked; roadmap marks it Done",
+                                                  "z":  "adding auth + ownership to the single-task fetch and tracking it publicly"
+                                              },
+                                              {
+                                                  "bullet":  "Made tests hermetic (separate test.db, wiped and recreated before every test via autouse fixture, dependency-overridden sessions) so order and leftovers can never fake a pass.",
+                                                  "x":  "Made tests hermetic and order-independent",
+                                                  "y":  "isolated DB, per-test wipe/recreate, 8 tests with zero interdependence",
+                                                  "z":  "overriding the DB dependency with a fixture-managed test session"
+                                              },
+                                              {
+                                                  "bullet":  "Covered the auth matrix (register, duplicate-username 400, login success, wrong-password 401, unauthenticated-create 401) plus ownership, in 8 fast TestClient tests.",
+                                                  "x":  "Covered the auth and ownership matrix",
+                                                  "y":  "8 tests: registration, duplicates, login paths, auth enforcement, isolation, hijack",
+                                                  "z":  "writing behavior-driven pytest tests against the live app with helper login fixtures"
+                                              },
+                                              {
+                                                  "bullet":  "Proved response models never leak secrets (registration test asserts \u0027password\u0027 is absent from every response) via from_attributes Pydantic schemas.",
+                                                  "x":  "Proved responses never leak secrets",
+                                                  "y":  "password absent from all payloads, asserted in tests",
+                                                  "z":  "shaping outputs with response-model schemas instead of raw ORM objects"
+                                              },
+                                              {
+                                                  "bullet":  "Served interactive Swagger docs at /docs with zero extra code, plus a /health check, making the API explorable seconds after uvicorn starts.",
+                                                  "x":  "Served interactive docs with zero extra code",
+                                                  "y":  "Swagger UI + /health live seconds after one uvicorn command",
+                                                  "z":  "leveraging FastAPI auto-docs and a one-line health route"
+                                              },
+                                              {
+                                                  "bullet":  "Modeled ownership relationally (users 1-N tasks via owner FK, indexed ids/usernames/titles, \u0027to-do\u0027 default status) in 20 lines of SQLAlchemy anyone can read.",
+                                                  "x":  "Modeled ownership relationally in 20 lines",
+                                                  "y":  "FK-linked tasks, indexed lookups, sensible defaults, auto-created tables",
+                                                  "z":  "defining two indexed SQLAlchemy models with a foreign-key owner relationship"
+                                              },
+                                              {
+                                                  "bullet":  "Listed limitations honestly instead of hiding them (hardcoded dev SECRET_KEY with an env-var remediation plan, no pagination, no refresh tokens, SQLite-only) with a sequenced roadmap.",
+                                                  "x":  "Listed limitations honestly with fixes sequenced",
+                                                  "y":  "5 known gaps each paired with a concrete next step on the roadmap",
+                                                  "z":  "documenting shortcomings and remediation order in the README"
+                                              },
+                                              {
+                                                  "bullet":  "Kept changing roles safe (role lives on the user row, checked per request, admin path tested implicitly by ownership logic) with no role column ever trusting client input.",
+                                                  "x":  "Kept role changes safe from client tampering",
+                                                  "y":  "roles server-assigned, per-request checked, never client-settable",
+                                                  "z":  "storing roles DB-side and excluding them from all request schemas"
+                                              },
+                                              {
+                                                  "bullet":  "Ran the whole thing with one command (uvicorn main:app --reload, auto-created SQLite file, pip-installable deps) so any reviewer goes from clone to Swagger in minutes.",
+                                                  "x":  "Made review instant with one-command startup",
+                                                  "y":  "clone to Swagger UI in minutes, zero config or external services",
+                                                  "z":  "auto-creating the database and documenting a minimal venv + pip + uvicorn flow"
+                                              },
+                                              {
+                                                  "bullet":  "Named the security posture out loud (bcrypt, JWT, RBAC, validation, sanitized errors) in a tech-stack README section recruiters can scan in 10 seconds.",
+                                                  "x":  "Made the security posture scannable in 10 seconds",
+                                                  "y":  "stack, features, endpoints, and setup each in their own README section",
+                                                  "z":  "structuring docs around framework, auth, validation, and testing choices"
+                                              },
+                                              {
+                                                  "bullet":  "Left the codebase extensible on purpose (stateless JWT auth ready for Postgres swap, pagination/filtering and refresh tokens next on the roadmap, Docker planned) without overbuilding today.",
+                                                  "x":  "Left the codebase extensible without overbuilding",
+                                                  "y":  "stateless auth, clear swap paths, next 4 features sequenced",
+                                                  "z":  "choosing SQLite + expiry-only tokens now while documenting the production upgrades"
+                                              },
+                                              {
+                                                  "bullet":  "Demonstrated backend fundamentals end to end (routing, ORM, validation, crypto, testing, docs) in ~350 lines of app code a junior can read in one sitting.",
+                                                  "x":  "Demonstrated backend fundamentals end to end",
+                                                  "y":  "~350 lines covering routing, ORM, validation, crypto, testing, and docs",
+                                                  "z":  "keeping the architecture flat and readable across 6 focused modules"
+                                              },
+                                              {
+                                                  "bullet":  "Earned its flagship slot as the auth reference implementation behind bigger projects, proving RBAC and ownership patterns reused across the portfolio.",
+                                                  "x":  "Earned flagship slot as the portfolio\u0027s auth reference",
+                                                  "y":  "RBAC + ownership patterns proven here and reused in larger systems",
+                                                  "z":  "isolating authentication and authorization into a clean, tested, documented sample"
+                                              }
+                                          ]
+                      }
+                  ],
+    "meta":  {
+                 "candidate":  "Chirag Gupta",
+                 "flagship_bullets":  80,
+                 "format":  "Google XYZ per bullet"
+             },
+    "universal_paragraph":  "I\u0027ve shipped three full-stack systems end-to-end: TypeMaster (Next.js, Express, PostgreSQL/Prisma, 200-lesson curriculum, per-finger analytics, live in production), SmartMeet-AI (Llama-3 + ElevenLabs + Google Calendar OAuth), and TaskFlow-API (layered FastAPI, Dockerized Postgres, tested RBAC). ML: hybrid XGBoost+DNN heart-disease classifier (0.946 AUC, pseudo-labeling). Internships: Axlerator backend (4-5s to ~1s queries), Grozoom security automation (obfuscated JS, AES-CBC, PoW), Cognifyz data tooling (scrapers, pipelines, visualization).",
+    "more_projects":  [
+                          {
+                              "name":  "TaskFlow-API",
+                              "xyz_bullets":  [
+                                                  {
+                                                      "y":  "10 endpoints, tested permission matrix, health-gated deploys",
+                                                      "bullet":  "Architected a layered FastAPI task API (routers/services/repository, Pydantic-V2, Alembic) with JWT + RBAC (10 endpoints, tested 401/403/404 matrix).",
+                                                      "z":  "layering routers/services/repos with JWT auth and Docker Compose",
+                                                      "x":  "Architected a layered, containerized RBAC task API plus React board"
+                                                  },
+                                                  {
+                                                      "y":  "10 endpoints, tested permission matrix, health-gated deploys",
+                                                      "bullet":  "Containerized PostgreSQL 15 behind pg_isready healthchecks with boot migrations and a documented Kubernetes strategy.",
+                                                      "z":  "layering routers/services/repos with JWT auth and Docker Compose",
+                                                      "x":  "Architected a layered, containerized RBAC task API plus React board"
+                                                  },
+                                                  {
+                                                      "y":  "10 endpoints, tested permission matrix, health-gated deploys",
+                                                      "bullet":  "Shipped a React 18 + Vite board (modal CRUD, optimistic updates, 401 auto-logout) with API limits against resource exhaustion.",
+                                                      "z":  "layering routers/services/repos with JWT auth and Docker Compose",
+                                                      "x":  "Architected a layered, containerized RBAC task API plus React board"
+                                                  }
+                                              ],
+                              "repo":  "github.com/chirag-gupta7/TaskFlow-API",
+                              "z":  "layering routers/services/repos with JWT auth and Docker Compose",
+                              "x":  "Architected a layered, containerized RBAC task API plus React board",
+                              "stack":  [
+                                            "FastAPI",
+                                            "PostgreSQL",
+                                            "Docker",
+                                            "React",
+                                            "JWT/RBAC"
+                                        ],
+                              "y":  "10 endpoints, tested permission matrix, health-gated deploys"
+                          },
+                          {
+                              "name":  "AI-helper (SmartMeet predecessor)",
+                              "xyz_bullets":  [
+                                                  {
+                                                      "y":  "14-table schema, offline TTS fallbacks, reimplemented audioop module",
+                                                      "bullet":  "Built a voice-assistant platform (Flask + SocketIO + SQLAlchemy) unifying ElevenLabs TTS, Google speech recognition, and full Google Calendar CRUD behind OAuth with a 14-table schema, 3-channel auth, and cascading offline TTS fallbacks - including a scipy/NumPy reimplementation of Python 3.13\u0027s removed audioop module.",
+                                                      "z":  "unifying TTS+ASR+Calendar behind OAuth with layered resilience",
+                                                      "x":  "Built a full voice-assistant platform with 3-channel auth"
+                                                  }
+                                              ],
+                              "repo":  "github.com/chirag-gupta7/AI-helper",
+                              "z":  "unifying TTS+ASR+Calendar behind OAuth with layered resilience",
+                              "x":  "Built a full voice-assistant platform with 3-channel auth",
+                              "stack":  [
+                                            "Flask",
+                                            "SocketIO",
+                                            "ElevenLabs",
+                                            "Google",
+                                            "Calendar",
+                                            "14-table",
+                                            "schema"
+                                        ],
+                              "y":  "14-table schema, offline TTS fallbacks, reimplemented audioop module"
+                          },
+                          {
+                              "name":  "Portfolio",
+                              "xyz_bullets":  [
+                                                  {
+                                                      "y":  "live site, dual themes, 15 PDFs rasterized to canvas carousel",
+                                                      "bullet":  "Engineered a dependency-free CRT-themed portfolio with a CSS-variable dual-theme system and a PDF.js gallery rasterizing 15 credential PDFs onto canvas previews in a responsive carousel - live on Vercel.",
+                                                      "z":  "hand-rolling themes, scroll choreography, and PDF.js previews",
+                                                      "x":  "Engineered a zero-dependency CRT portfolio with PDF credential gallery"
+                                                  }
+                                              ],
+                              "repo":  "vanilla HTML/CSS/JS",
+                              "z":  "hand-rolling themes, scroll choreography, and PDF.js previews",
+                              "x":  "Engineered a zero-dependency CRT portfolio with PDF credential gallery",
+                              "stack":  [
+                                            "HTML",
+                                            "CSS",
+                                            "JS",
+                                            "PDF.js",
+                                            "Vercel"
+                                        ],
+                              "y":  "live site, dual themes, 15 PDFs rasterized to canvas carousel"
+                          },
+                          {
+                              "name":  "Go curriculum + Little Lemon capstone",
+                              "xyz_bullets":  [
+                                                  {
+                                                      "y":  "23 Go programs; role-based ordering API with atomic checkout",
+                                                      "bullet":  "Built a 23-program progressive Go curriculum (syntax to HTTP clients to vendored Gorilla Mux modules) culminating in a hand-written CRUD REST API.",
+                                                      "z":  "progressing syntax-to-production plus permission-engineered DRF",
+                                                      "x":  "Self-taught Go to CRUD-API level and built the Meta capstone twice"
+                                                  },
+                                                  {
+                                                      "y":  "23 Go programs; role-based ordering API with atomic checkout",
+                                                      "bullet":  "Engineered the Meta \u0027Little Lemon\u0027 capstone twice in DRF: token auth, 4 custom permission classes, per-verb permissions, transactional checkout with server-side pricing.",
+                                                      "z":  "progressing syntax-to-production plus permission-engineered DRF",
+                                                      "x":  "Self-taught Go to CRUD-API level and built the Meta capstone twice"
+                                                  }
+                                              ],
+                              "repo":  "GOLANG-Practice, API-Practice, Backend-Developer",
+                              "z":  "progressing syntax-to-production plus permission-engineered DRF",
+                              "x":  "Self-taught Go to CRUD-API level and built the Meta capstone twice",
+                              "stack":  [
+                                            "Go",
+                                            "Gorilla",
+                                            "Mux",
+                                            "Django",
+                                            "REST",
+                                            "Framework",
+                                            "Djoser"
+                                        ],
+                              "y":  "23 Go programs; role-based ordering API with atomic checkout"
+                          },
+                          {
+                              "name":  "CS fundamentals (20 repos)",
+                              "xyz_bullets":  [
+                                                  {
+                                                      "y":  "C data structures x2, Java GUI, 15+ Python programs, 4 unittest suites",
+                                                      "bullet":  "Built a CS-fundamentals portfolio spanning three languages: stacks/queues twice in C (arrays + linked lists with malloc/free), Java console + Swing GUI, 15+ Python programs (OOP, closures, map/filter/reduce).",
+                                                      "z":  "practicing pointers-to-OOP with tests and shipped mini-systems",
+                                                      "x":  "Built trilingual CS fundamentals with testing discipline"
+                                                  },
+                                                  {
+                                                      "y":  "C data structures x2, Java GUI, 15+ Python programs, 4 unittest suites",
+                                                      "bullet":  "Applied testing discipline early: 4 unittest suites with fixtures, edge matrices, and exception assertions.",
+                                                      "z":  "practicing pointers-to-OOP with tests and shipped mini-systems",
+                                                      "x":  "Built trilingual CS fundamentals with testing discipline"
+                                                  },
+                                                  {
+                                                      "y":  "C data structures x2, Java GUI, 15+ Python programs, 4 unittest suites",
+                                                      "bullet":  "Shipped small end-to-end systems: Discord bot on a REST API, CSV extractor with schema detection, randomized terminal RPG.",
+                                                      "z":  "practicing pointers-to-OOP with tests and shipped mini-systems",
+                                                      "x":  "Built trilingual CS fundamentals with testing discipline"
+                                                  }
+                                              ],
+                              "repo":  "github.com/chirag-gupta7 (DSA-in-C, Java, Python practice repos)",
+                              "z":  "practicing pointers-to-OOP with tests and shipped mini-systems",
+                              "x":  "Built trilingual CS fundamentals with testing discipline",
+                              "stack":  [
+                                            "C",
+                                            "Java",
+                                            "Python",
+                                            "unittest",
+                                            "discord.py"
+                                        ],
+                              "y":  "C data structures x2, Java GUI, 15+ Python programs, 4 unittest suites"
+                          },
+                          {
+                              "xyz_bullets":  [
+                                                  {
+                                                      "bullet":  "Turned the Silicon Valley joke into a working product: upload any food photo and get a hot-dog verdict with confidence bars in seconds via a Flask proxy to the julien-c/hotdog-not-hotdog model.",
+                                                      "x":  "Turned a comedy bit into a working AI product",
+                                                      "y":  "any food photo judged in seconds with scored verdict",
+                                                      "z":  "proxying uploads through Flask to a dedicated hot-dog classifier"
+                                                  },
+                                                  {
+                                                      "bullet":  "Kept secrets out of the frontend by loading the Hugging Face URL and key from .env and refusing to boot on missing or placeholder credentials.",
+                                                      "x":  "Kept secrets out of the frontend and out of git",
+                                                      "y":  "no key in client code; boot refused without real credentials",
+                                                      "z":  "loading config from .env with fail-fast validation"
+                                                  },
+                                                  {
+                                                      "bullet":  "Mapped every API failure to a human message (503 model-loading, 401 bad key, 400 bad image, JSON errors) with full server-side logging, so users never see raw stack traces.",
+                                                      "x":  "Mapped every API failure to a human message",
+                                                      "y":  "503/401/400/parse errors each get plain-English guidance plus logs",
+                                                      "z":  "branching on status codes with per-case messages and server logging"
+                                                  },
+                                                  {
+                                                      "bullet":  "Blocked bad uploads at the door (6 extensions whitelisted, missing-extension and empty-file rejected, 16MB cap with a dedicated 413 handler) before spending a single API call.",
+                                                      "x":  "Blocked bad uploads before spending API calls",
+                                                      "y":  "6-type whitelist, empty-file and oversize rejection with clear errors",
+                                                      "z":  "validating extension, content, and size with specific 400/413 responses"
+                                                  },
+                                                  {
+                                                      "bullet":  "Normalized messy model output into clean display data (None-safe labels, float scores, 2-decimal percentages) regardless of what the API returns.",
+                                                      "x":  "Normalized messy model output into clean display data",
+                                                      "y":  "None-safe labels and 2-decimal percentages on every prediction",
+                                                      "z":  "formatting predictions defensively with type coercion"
+                                                  },
+                                                  {
+                                                      "bullet":  "Celebrated correct answers with a 5-second CSS confetti rain plus animated confidence progress bars, making a demo people remember.",
+                                                      "x":  "Made correct answers unforgettable",
+                                                      "y":  "5-second confetti celebration plus animated confidence bars",
+                                                      "z":  "adding CSS confetti physics and progress-fill animations on hot-dog verdicts"
+                                                  },
+                                                  {
+                                                      "bullet":  "Shipped a polished UX (drag-and-drop with dragover glow, live preview, Poppins typography, Font Awesome icons, Animate.css motion, persistent dark mode) in vanilla HTML/CSS/JS.",
+                                                      "x":  "Shipped a polished UX with zero frontend frameworks",
+                                                      "y":  "drag-and-drop, live preview, dark mode, animated motion throughout",
+                                                      "z":  "hand-building the interface with modern CSS plus three CDN libraries"
+                                                  },
+                                                  {
+                                                      "bullet":  "Documented the full integration contract (endpoint shape, Bearer auth, binary payload, JSON response) with a copy-paste requests example so anyone can run the backend.",
+                                                      "x":  "Documented the integration contract completely",
+                                                      "y":  "endpoint, auth, payload, and response all specified with runnable example",
+                                                      "z":  "writing README setup, API, and troubleshooting docs with code samples"
+                                                  },
+                                                  {
+                                                      "bullet":  "Made the service observable with a /health endpoint, per-request status/header logging, 400-body debug capture, and timed startup logs.",
+                                                      "x":  "Made the service observable",
+                                                      "y":  "health endpoint plus per-request status, header, and error-body logs",
+                                                      "z":  "adding logging at every layer with a dedicated health check"
+                                                  },
+                                                  {
+                                                      "bullet":  "Timed out safely with 30-second API caps and RequestException handling that surfaces connection failures as clean errors instead of hangs.",
+                                                      "x":  "Timed out safely instead of hanging",
+                                                      "y":  "30-second caps; network failures become clean messages",
+                                                      "z":  "bounding external calls with timeouts and exception translation"
+                                                  },
+                                                  {
+                                                      "bullet":  "Separated concerns cleanly (query, process, format, routes, error handlers) in 244 lines so the proxy logic is testable in isolation.",
+                                                      "x":  "Kept 244 lines cleanly separated and testable",
+                                                      "y":  "query/process/format/routes isolated behind pure helpers",
+                                                      "z":  "splitting API, validation, and presentation into single-purpose functions"
+                                                  },
+                                                  {
+                                                      "bullet":  "Handled edge inputs explicitly (extensionless files, None labels, non-list payloads, API-level error dicts) instead of assuming happy paths.",
+                                                      "x":  "Handled edge inputs explicitly",
+                                                      "y":  "extensionless files, nulls, and error dicts all produce sane output",
+                                                      "z":  "guarding every assumption with type checks and fallbacks"
+                                                  },
+                                                  {
+                                                      "bullet":  "Ran anywhere with host 0.0.0.0 binding, env-driven debug flags, and MIT licensing across 4 commits.",
+                                                      "x":  "Ran anywhere with one command",
+                                                      "y":  "container-friendly binding, env-driven config, MIT licensed",
+                                                      "z":  "binding broadly, externalizing config, and licensing openly"
+                                                  },
+                                                  {
+                                                      "bullet":  "Proved AI-integration fundamentals (auth headers, octet-stream payloads, status-driven UX, key hygiene) that scaled directly into the larger PHOTO-RECOGNIZER build.",
+                                                      "x":  "Proved AI-integration fundamentals that scaled up",
+                                                      "y":  "auth, payloads, error UX, and key hygiene patterns reused in the bigger build",
+                                                      "z":  "establishing the proxy pattern later expanded with forensics and insights"
+                                                  },
+                                                  {
+                                                      "bullet":  "Gave users instant feedback (live preview before upload, file info display, loading states) so waiting on the model never feels broken.",
+                                                      "x":  "Gave users instant feedback at every step",
+                                                      "y":  "preview, file info, and loading states before and during analysis",
+                                                      "z":  "rendering client-side previews and progress UI around the async call"
+                                                  },
+                                                  {
+                                                      "bullet":  "Supported 6 image formats (png/jpg/jpeg/gif/bmp/webp) with extension-specific error messages naming exactly what went wrong.",
+                                                      "x":  "Supported 6 image formats with precise errors",
+                                                      "y":  "each rejection names the bad extension and lists valid types",
+                                                      "z":  "whitelisting formats with descriptive per-case messages"
+                                                  },
+                                                  {
+                                                      "bullet":  "Logged response headers and bodies for 400s specifically, cutting future debugging from guesswork to reading logs.",
+                                                      "x":  "Made 400s debuggable instead of mysterious",
+                                                      "y":  "error bodies captured server-side on every bad request",
+                                                      "z":  "logging response text specifically for client-error cases"
+                                                  },
+                                                  {
+                                                      "bullet":  "Chose the right model for the joke (a purpose-built hot-dog classifier, not a generic vision model) showing product judgment, not just plumbing.",
+                                                      "x":  "Chose the right model for the product",
+                                                      "y":  "purpose-built classifier means sharper verdicts than generic vision",
+                                                      "z":  "selecting julien-c/hotdog-not-hotdog over a general classifier"
+                                                  },
+                                                  {
+                                                      "bullet":  "Listed honest next steps (multi-upload, better errors, cloud deploy) instead of pretending a 4-commit demo is finished.",
+                                                      "x":  "Listed honest next steps",
+                                                      "y":  "roadmap states multi-upload, error UX, and deploy explicitly",
+                                                      "z":  "documenting future enhancements rather than overselling"
+                                                  },
+                                                  {
+                                                      "bullet":  "Delivered the whole joke end to end (frontend, proxy, model, docs, theme, celebration) as a solo MIT-licensed build recruiters can run in minutes.",
+                                                      "x":  "Delivered the whole joke end to end solo",
+                                                      "y":  "frontend, proxy, model, docs, and delight in one runnable repo",
+                                                      "z":  "owning every layer from drag-and-drop to model response"
+                                                  }
+                                              ],
+                              "id":  "nothotdog",
+                              "keywords":  [
+                                               "Flask",
+                                               "HuggingFace",
+                                               "image classification",
+                                               "REST proxy",
+                                               "JavaScript",
+                                               "CSS animations",
+                                               "dark mode",
+                                               "dotenv"
+                                           ],
+                              "llm_brief":  "Hot-dog-or-not classifier (Silicon Valley joke, shipped): vanilla-JS drag-and-drop frontend with confetti celebration and dark mode over a 244-line Flask proxy to the julien-c/hotdog-not-hotdog model, with env-key hygiene, per-status error mapping, 6-format validation, 16MB cap, health endpoint, and full docs. MIT, 4 commits.",
+                              "metrics":  {
+                                              "backend_lines":  244,
+                                              "commits":  4,
+                                              "confetti_seconds":  5,
+                                              "formats":  6,
+                                              "max_mb":  16,
+                                              "timeout_s":  30
+                                          },
+                              "name":  "nothotdog",
+                              "repo_url":  "https://github.com/chirag-gupta7/nothotdog",
+                              "role":  "Sole builder",
+                              "stack":  [
+                                            "Flask",
+                                            "HuggingFace Inference API (julien-c/hotdog-not-hotdog)",
+                                            "HTML/CSS/JS",
+                                            "Font Awesome",
+                                            "Animate.css",
+                                            "python-dotenv"
+                                        ],
+                              "tagline":  "Hot-dog-or-not AI classifier with confetti verdicts",
+                              "type":  "project"
+                          },
+                          {
+                              "xyz_bullets":  [
+                                                  {
+                                                      "bullet":  "Reached 0.9458 AUC on held-out CDC BRFSS data by stacking XGBoost (0.9215) and a Keras DNN (0.9093) under an L2 logistic meta-learner trained on validation-set probabilities.",
+                                                      "x":  "Reached 0.9458 AUC on held-out data",
+                                                      "y":  "+243 bps over XGBoost alone, +365 bps over the DNN",
+                                                      "z":  "stacking both models under a properly-disciplined logistic meta-learner"
+                                                  },
+                                                  {
+                                                      "bullet":  "Grew training data 57 percent (140K to 220K rows) by pseudo-labeling about 80K ultra-confident rows (0.97/0.03 gates) from a second 300K-row dataset at under 3 percent estimated noise.",
+                                                      "x":  "Grew training data 57 percent with under 3 percent noise",
+                                                      "y":  "about 80K mined labels expanding the corpus",
+                                                      "z":  "gating second-dataset predictions at 0.97/0.03 and retraining the full stack"
+                                                  },
+                                                  {
+                                                      "bullet":  "Hit 90.1 percent clinical recall at 70.4 percent precision (F1 0.79) with a 37-point recall-constrained threshold sweep landing on t=0.3425.",
+                                                      "x":  "Hit 90.1 percent recall at 70.4 percent precision",
+                                                      "y":  "recall floor enforced, best precision among qualifiers, F1 0.79",
+                                                      "z":  "sweeping 37 thresholds and maximizing precision under a 0.90 recall constraint"
+                                                  },
+                                                  {
+                                                      "bullet":  "Prevented leakage by fitting the ColumnTransformer on train only (StandardScaler numerics, one-hot categoricals) and refitting from scratch after pseudo-merge.",
+                                                      "x":  "Prevented leakage across a two-stage pipeline",
+                                                      "y":  "train-only fits, stratified 70/15/15 splits, seed 42",
+                                                      "z":  "isolating preprocessing fits and stratifying every split"
+                                                  },
+                                                  {
+                                                      "bullet":  "Tuned XGBoost with a 25-trial Optuna study over 7 dimensions (trees 200-2000, depth 3-9, log-scale LR, subsample, regularizers, SPW toggle) under 5-fold stratified AUC.",
+                                                      "x":  "Tuned XGBoost over a 7-dimensional space",
+                                                      "y":  "25 trials, 5-fold AUC, best params persisted to JSON",
+                                                      "z":  "running Optuna with stratified cross-validation and a scale-pos-weight toggle"
+                                                  },
+                                                  {
+                                                      "bullet":  "Regularized the DNN (256-128-64 with BatchNorm, dropout 0.3/0.3/0.2, Adam 1e-3, early stopping patience 3 on val AUC) to about 46K params against 140K rows.",
+                                                      "x":  "Regularized a 46K-param DNN against overfitting",
+                                                      "y":  "batch norm plus staged dropout plus early stopping on val AUC",
+                                                      "z":  "architecting 256-128-64 with normalization, dropout schedule, and patience-3 stopping"
+                                                  },
+                                                  {
+                                                      "bullet":  "Handled imbalance honestly with prevalence-computed scale_pos_weight, recomputed after pseudo-labeling instead of hardcoded.",
+                                                      "x":  "Handled imbalance honestly",
+                                                      "y":  "class weights recomputed from actual label ratios at each stage",
+                                                      "z":  "deriving scale_pos_weight from observed prevalence, not defaults"
+                                                  },
+                                                  {
+                                                      "bullet":  "Aligned two datasets without schema drift via sorted column-intersection filtering that raises loudly on empty overlap.",
+                                                      "x":  "Aligned two datasets with zero schema drift",
+                                                      "y":  "sorted intersection filtering with fail-loud empty checks",
+                                                      "z":  "intersecting feature sets deterministically before any merge"
+                                                  },
+                                                  {
+                                                      "bullet":  "Proved significance, not just point estimates (DeLong Z 18.7/24.3, p\u003c0.001, bootstrapped 95 percent CIs) plus a clinical illustration: 90 TP, 10 FN per 1,000 at 10 percent prevalence.",
+                                                      "x":  "Proved significance, not just point estimates",
+                                                      "y":  "DeLong p\u003c0.001, tight CIs, per-1000 clinical illustration",
+                                                      "z":  "testing with DeLong, bootstrapping intervals, and translating to patient counts"
+                                                  },
+                                                  {
+                                                      "bullet":  "Shipped 8 publication-ready plots (ROC, PR, threshold, AUC bars, summary grid) at 220 DPI plus a metrics.json record consumed by the showcase.",
+                                                      "x":  "Shipped 8 publication-ready plots plus machine-readable metrics",
+                                                      "y":  "220-DPI visuals and a 10-field metrics.json driving the site",
+                                                      "z":  "generating the full evaluation suite with consistent styling"
+                                                  },
+                                                  {
+                                                      "bullet":  "Published the work three ways (1.73MB research paper, 2,053-line interactive showcase with animated counters, MIT repo with BibTeX citation) so anyone can verify or reuse it.",
+                                                      "x":  "Published the work three verifiable ways",
+                                                      "y":  "paper, interactive site, and citable repo all cross-linked",
+                                                      "z":  "writing the manuscript, building the showcase, and licensing openly"
+                                                  },
+                                                  {
+                                                      "bullet":  "Ran the full pipeline in about 15 minutes (2 min XGB, 8 min DNN, 1 min pseudo-labeling) with batched inference at about 10K samples per second.",
+                                                      "x":  "Ran the full pipeline in about 15 minutes",
+                                                      "y":  "2-min boosting, 8-min deep net, 10K-per-second batched inference",
+                                                      "z":  "using hist trees, batch-256 training, and vectorized scoring"
+                                                  },
+                                                  {
+                                                      "bullet":  "Built an honest evaluation culture (placeholder README table filled only by real metrics.json, fallbacks labeled, missing helper scripts flagged) across the repo.",
+                                                      "x":  "Built an honest evaluation culture",
+                                                      "y":  "placeholders never faked; fallbacks labeled; gaps disclosed",
+                                                      "z":  "wiring metrics from files and marking every synthetic stand-in"
+                                                  },
+                                                  {
+                                                      "bullet":  "Scoped deployment responsibly (external validation, fairness audits, calibration, IRB, EHR integration, monthly monitoring) in an Appendix-F checklist.",
+                                                      "x":  "Scoped deployment like a clinical tool, not a demo",
+                                                      "y":  "validation, fairness, calibration, and monitoring checklist published",
+                                                      "z":  "specifying pre/post-deployment governance for a medical model"
+                                                  },
+                                                  {
+                                                      "bullet":  "Beat the Framingham baseline (0.73-0.76 AUC) by about 20 points, giving the headline number its proper context on the showcase.",
+                                                      "x":  "Beat the clinical baseline by about 20 points",
+                                                      "y":  "0.9458 vs Framingham 0.73-0.76, shown side by side",
+                                                      "z":  "benchmarking against the established risk score, not in a vacuum"
+                                                  },
+                                                  {
+                                                      "bullet":  "Kept 618 lines of pipeline reproducible (seed 42, pinned-minimum deps, stratified everything, saved preprocessor plus all three models) for one-command retraining.",
+                                                      "x":  "Kept 618 lines fully reproducible",
+                                                      "y":  "seeded, pinned, stratified, with all artifacts persisted",
+                                                      "z":  "fixing seeds, flooring dependencies, and saving every stage"
+                                                  },
+                                                  {
+                                                      "bullet":  "Explored CatBoost as a tuned alternative (5-dimension space, 500-2500 iterations) with a skip flag, showing breadth beyond one library.",
+                                                      "x":  "Explored CatBoost as a tuned alternative",
+                                                      "y":  "5-dimension space with graceful skip when uninstalled",
+                                                      "z":  "adding an optional second gradient-boosting study to the tuner"
+                                                  },
+                                                  {
+                                                      "bullet":  "Turned model outputs into plain-English performance stories (animated 94.58/90.12/79.10 counters, 5-step workflow, 2 code cards) that non-ML readers grasp instantly.",
+                                                      "x":  "Turned metrics into stories non-ML readers grasp",
+                                                      "y":  "animated counters, workflow narrative, and runnable code cards",
+                                                      "z":  "designing the showcase around comprehension, not just numbers"
+                                                  },
+                                                  {
+                                                      "bullet":  "Chose recall-first operating points deliberately (missing a patient costs more than a false alarm: NPV 98.1 percent) and said so in the paper.",
+                                                      "x":  "Chose recall-first operating points deliberately",
+                                                      "y":  "NPV 98.1 percent; misses minimized where they cost most",
+                                                      "z":  "constraining thresholds on recall and justifying the trade explicitly"
+                                                  },
+                                                  {
+                                                      "bullet":  "Delivered research-grade ML solo (pipeline, tuning, paper, site, banner art) proving end-to-end ownership from raw survey data to published result.",
+                                                      "x":  "Delivered research-grade ML solo end to end",
+                                                      "y":  "data, models, tuning, paper, site, and art in one repo",
+                                                      "z":  "owning every stage from BRFSS rows to manuscript to showcase"
+                                                  }
+                                              ],
+                              "id":  "heart-disease-detection",
+                              "keywords":  [
+                                               "XGBoost",
+                                               "Keras",
+                                               "Optuna",
+                                               "pseudo-labeling",
+                                               "BRFSS",
+                                               "AUC",
+                                               "recall",
+                                               "DeLong",
+                                               "TensorFlow"
+                                           ],
+                              "llm_brief":  "Hybrid XGBoost + Keras DNN heart-disease classifier on CDC BRFSS data: 0.9458 AUC via validation-stacked L2 meta-learner, 80K-row pseudo-labeling loop (0.97/0.03 gates), 37-point recall-constrained thresholding (t=0.3425, 90.1 percent recall), 25-trial Optuna tuning, DeLong significance, 8 publication plots, research paper, and a 2,053-line interactive showcase. Solo, MIT.",
+                              "metrics":  {
+                                              "auc":  0.9458,
+                                              "dnn_auc":  0.9093,
+                                              "f1":  0.79,
+                                              "precision":  0.7039,
+                                              "pseudo_rows":  "about 80K",
+                                              "recall":  0.9012,
+                                              "threshold":  0.3425,
+                                              "xgb_auc":  0.9215
+                                          },
+                              "name":  "Heart-disease-detection",
+                              "repo_url":  "https://github.com/chirag-gupta7/Heart-disease-detection",
+                              "role":  "Sole builder (ML + paper + showcase)",
+                              "stack":  [
+                                            "XGBoost",
+                                            "TensorFlow/Keras",
+                                            "scikit-learn",
+                                            "Optuna",
+                                            "pandas",
+                                            "imbalanced-learn",
+                                            "matplotlib",
+                                            "CDC BRFSS 2020"
+                                        ],
+                              "tagline":  "0.9458-AUC hybrid heart-disease classifier with research paper",
+                              "type":  "project"
+                          },
+                          {
+                              "xyz_bullets":  [
+                                                  {
+                                                      "bullet":  "Classified any photo with ViT (google/vit-base-patch16-224, 1,000+ ImageNet classes) plus latency instrumentation and per-status recovery (503 loading, 401 key, 400 format).",
+                                                      "x":  "Classified any photo with state-of-the-art ViT",
+                                                      "y":  "1,000+ classes with timed requests and per-status recovery",
+                                                      "z":  "integrating the ViT inference API with instrumented, status-aware handling"
+                                                  },
+                                                  {
+                                                      "bullet":  "Fingerprinted every image forensically (full EXIF map, MD5 + SHA-256, 200x200 alpha-flattened thumbnail) before the AI even answers.",
+                                                      "x":  "Fingerprinted every image forensically",
+                                                      "y":  "EXIF, dual hashes, and display thumbnails on all uploads",
+                                                      "z":  "extracting metadata, hashing bytes, and rendering flattened previews"
+                                                  },
+                                                  {
+                                                      "bullet":  "Read camera truth from pixels (make/model/lens, 1/Ns exposure math, f-number, ISO, focal length, GPS flag, parsed capture dates with unix stamps).",
+                                                      "x":  "Read camera truth from pixels",
+                                                      "y":  "exposure fractions, apertures, ISOs, and dates decoded from EXIF",
+                                                      "z":  "parsing EXIF tags into human fields with format conversions"
+                                                  },
+                                                  {
+                                                      "bullet":  "Profiled color like a lab (8-bin RGB histograms, Euclidean greedy clustering to 5 swatches, brightness tiers, std-dev contrast) on downsampled frames.",
+                                                      "x":  "Profiled color like a lab",
+                                                      "y":  "histograms, 5-swatch clustering, brightness/contrast scores per image",
+                                                      "z":  "analyzing 50x50 downsamples with NumPy statistics"
+                                                  },
+                                                  {
+                                                      "bullet":  "Grouped predictions into person/animal/food/landscape/vehicle categories, sorted by score, with object-detection box support for spatial models.",
+                                                      "x":  "Grouped predictions into human categories",
+                                                      "y":  "5 keyword-routed categories, score-sorted, box-aware",
+                                                      "z":  "routing labels through category matchers with dual-format support"
+                                                  },
+                                                  {
+                                                      "bullet":  "Spoke plain English with confidence tiers (primarily-shows over 0.7, likely over 0.5, hedged below) plus secondary subjects, resolution, lighting, camera, and location sentences.",
+                                                      "x":  "Spoke plain-English insights with calibrated confidence",
+                                                      "y":  "tiered phrasing plus 6 evidence-backed follow-up sentences",
+                                                      "z":  "generating insight tiers from scores fused with metadata"
+                                                  },
+                                                  {
+                                                      "bullet":  "Never left users empty-handed (metadata-first partial results when AI fails, API errors returned with metadata attached, 200s that let the frontend render gracefully).",
+                                                      "x":  "Never left users empty-handed on AI failure",
+                                                      "y":  "partial forensics always delivered; errors render, never blank",
+                                                      "z":  "attaching metadata to every error path with graceful status codes"
+                                                  },
+                                                  {
+                                                      "bullet":  "Validated uploads hard (6 formats, extension checks, empty-file rejection, 16MB cap with 413 handler) and auto-opened the browser on launch.",
+                                                      "x":  "Validated uploads hard with welcoming DX",
+                                                      "y":  "6 formats, size caps, precise errors, auto-opening browser",
+                                                      "z":  "whitelisting types, bounding sizes, and launching the UI automatically"
+                                                  },
+                                                  {
+                                                      "bullet":  "Guarded secrets (env-loaded URL/key, placeholder detection with startup warnings, 30-char key sanity check surfaced in /health).",
+                                                      "x":  "Guarded secrets with startup verification",
+                                                      "y":  "placeholder keys warned; key health exposed via endpoint",
+                                                      "z":  "validating credentials at boot and reporting status"
+                                                  },
+                                                  {
+                                                      "bullet":  "Shipped a cinematic UX (YouTube demo video, drag-and-drop, 5-tab metadata inspector, animated confidence bars, persistent dark/light themes, mobile-first responsive).",
+                                                      "x":  "Shipped a cinematic, accessible UX",
+                                                      "y":  "demo video, tabbed inspector, animated bars, dual themes, all screens",
+                                                      "z":  "building tabbed metadata UI with animations and persisted theming"
+                                                  },
+                                                  {
+                                                      "bullet":  "Timed everything (per-request API seconds, metadata extraction seconds, total pipeline seconds) and logged statuses plus headers for debugging.",
+                                                      "x":  "Timed everything end to end",
+                                                      "y":  "API, metadata, and total seconds measured and logged per upload",
+                                                      "z":  "instrumenting each stage with wall-clock logging"
+                                                  },
+                                                  {
+                                                      "bullet":  "Handled dual model families (classification lists and box-style detection dicts) in one formatter instead of assuming one shape.",
+                                                      "x":  "Handled dual model families in one formatter",
+                                                      "y":  "classification and detection payloads both render correctly",
+                                                      "z":  "branching on payload shape with dedicated formatters per family"
+                                                  },
+                                                  {
+                                                      "bullet":  "Null-proofed the pipeline (None labels/scores defaulted, binary EXIF summarized by byte size, GPS wrapped in try/except, insight fallback sentence).",
+                                                      "x":  "Null-proofed the entire pipeline",
+                                                      "y":  "no None crash, no binary-serialization crash, always a sentence",
+                                                      "z":  "defaulting nulls, summarizing binaries, and guarding GPS parsing"
+                                                  },
+                                                  {
+                                                      "bullet":  "Pinned a minimal 5-package stack (Flask, Pillow, NumPy, requests, dotenv) proving heavyweight results need not mean heavyweight deps.",
+                                                      "x":  "Delivered heavyweight results on 5 packages",
+                                                      "y":  "50KB app, 5 pinned deps, 95 percent-plus browser support",
+                                                      "z":  "choosing Pillow/NumPy over ML frameworks for the forensics layer"
+                                                  },
+                                                  {
+                                                      "bullet":  "Wrote ops-grade docs (env setup, model-swap guide with 2 alternates, 4-issue troubleshooting, perf playbook, security notes) across a full README.",
+                                                      "x":  "Wrote ops-grade docs",
+                                                      "y":  "setup, model swaps, troubleshooting, and perf guidance included",
+                                                      "z":  "documenting configuration, alternatives, and failure recovery"
+                                                  },
+                                                  {
+                                                      "bullet":  "Planned openly (batch processing, history, PDF/JSON export, custom models, Docker, DB, auth, rate limits) marking this a foundation, not a finish.",
+                                                      "x":  "Planned openly beyond v1",
+                                                      "y":  "9-item roadmap spanning features and hardening",
+                                                      "z":  "listing batch, persistence, and production needs explicitly"
+                                                  },
+                                                  {
+                                                      "bullet":  "Scaled the nothotdog proxy pattern 3x (709 lines vs 244) adding forensics, insights, categories, timing, and dual-format support on the same skeleton.",
+                                                      "x":  "Scaled the proxy pattern 3x with real systems",
+                                                      "y":  "709 lines adding forensics, insights, and timing on one skeleton",
+                                                      "z":  "growing the proven Flask-proxy design with metadata and NLG layers"
+                                                  },
+                                                  {
+                                                      "bullet":  "Made it demoable in 6 steps (clone, pip install, .env key, run, auto-browser, upload) with a recorded video, so evaluators feel it in minutes.",
+                                                      "x":  "Made it demoable in minutes",
+                                                      "y":  "6-step quickstart plus a full YouTube walkthrough",
+                                                      "z":  "streamlining setup with auto-launch and recorded evidence"
+                                                  },
+                                                  {
+                                                      "bullet":  "Released MIT with support channels (GitHub issues, docs-first questions) across 10 commits of iterated hardening.",
+                                                      "x":  "Released and maintained openly",
+                                                      "y":  "MIT licensed, 10 commits, documented support paths",
+                                                      "z":  "iterating publicly with contribution and support guidance"
+                                                  },
+                                                  {
+                                                      "bullet":  "Proved full-stack AI productcraft (inference, forensics, NLG, UX, docs, video) solo: the portfolio\u0027s most complete small system.",
+                                                      "x":  "Proved full-stack AI productcraft solo",
+                                                      "y":  "inference plus forensics plus NLG plus cinematic UX in one repo",
+                                                      "z":  "owning model integration through insight generation to pixel-polish"
+                                                  }
+                                              ],
+                              "id":  "photo-recognizer",
+                              "keywords":  [
+                                               "Flask",
+                                               "ViT",
+                                               "HuggingFace",
+                                               "EXIF",
+                                               "Pillow",
+                                               "NumPy",
+                                               "forensics",
+                                               "NLG",
+                                               "dark mode"
+                                           ],
+                              "llm_brief":  "AI photo analyzer (709-line Flask + cinematic frontend + YouTube demo): ViT classification with per-status recovery fused with a hand-built forensics engine (EXIF, dual hashes, thumbnails, color clustering, brightness/contrast) and confidence-tiered natural-language insights, plus timing instrumentation, null-proofing, dual-format support, and ops-grade docs. Solo, MIT, 10 commits.",
+                              "metrics":  {
+                                              "backend_lines":  709,
+                                              "brightness_tiers":  3,
+                                              "commits":  10,
+                                              "confidence_tiers":  3,
+                                              "formats":  6,
+                                              "max_mb":  16,
+                                              "swatches":  5
+                                          },
+                              "name":  "PHOTO-RECOGNIZER",
+                              "repo_url":  "https://github.com/chirag-gupta7/PHOTO-RECOGNIZER",
+                              "role":  "Sole builder",
+                              "stack":  [
+                                            "Flask 2",
+                                            "HuggingFace ViT (google/vit-base-patch16-224)",
+                                            "Pillow",
+                                            "NumPy",
+                                            "HTML/CSS/JS",
+                                            "Font Awesome"
+                                        ],
+                              "tagline":  "ViT photo analyzer with forensics engine and plain-English insights",
+                              "type":  "project"
+                          },
+                          {
+                              "xyz_bullets":  [
+                                                  {
+                                                      "bullet":  "Drew buttery strokes with round caps/joins on a dual-canvas rig (persistent art plus overlay previews) so rubber-banding never touches finished pixels.",
+                                                      "x":  "Drew buttery strokes without touching finished pixels",
+                                                      "y":  "round caps/joins on art canvas; previews isolated on overlay",
+                                                      "z":  "splitting persistent art from rubber-band overlay canvases"
+                                                  },
+                                                  {
+                                                      "bullet":  "Erased for real with destination-out compositing (true pixel removal, not white paint) at the same adjustable sizes as the brush.",
+                                                      "x":  "Erased for real, not white paint",
+                                                      "y":  "true transparency erasing at 1-50px sizes",
+                                                      "z":  "compositing destination-out instead of painting background color"
+                                                  },
+                                                  {
+                                                      "bullet":  "Previewed shapes live (rectangle, drag-radius circle, line) on the overlay, committing to art only on mouse-up for flicker-free feedback.",
+                                                      "x":  "Previewed shapes live with zero flicker",
+                                                      "y":  "rubber-band previews committed only on release",
+                                                      "z":  "rendering drag previews on overlay, finalizing on mouse-up"
+                                                  },
+                                                  {
+                                                      "bullet":  "Typed onto the canvas with an inline overlay input (Enter commits, Escape cancels, size tracks brush) that bakes text into history.",
+                                                      "x":  "Typed onto the canvas natively",
+                                                      "y":  "inline input with commit/cancel keys, brush-scaled type",
+                                                      "z":  "overlaying a positioned input that stamps text into the art"
+                                                  },
+                                                  {
+                                                      "bullet":  "Undid anything across 20 snapshot states with redo-branch truncation, canUndo/canRedo gating, and global Ctrl+Z/Y/S/O shortcuts.",
+                                                      "x":  "Undid anything across 20 states",
+                                                      "y":  "branch-truncated history with gated shortcuts for undo/redo/save/open",
+                                                      "z":  "stacking dataURL snapshots in a reusable hook with keyboard map"
+                                                  },
+                                                  {
+                                                      "bullet":  "Drew on phones and tablets identically via mouse/touch normalization reading whichever pointer the event carries.",
+                                                      "x":  "Drew identically on phones and tablets",
+                                                      "y":  "full touch parity: start/move/end mapped across pointer types",
+                                                      "z":  "normalizing mouse and touch coordinates through one position helper"
+                                                  },
+                                                  {
+                                                      "bullet":  "Bridged sibling components through a published window.canvasActions API (clear/export/load/undo/redo/states): a pragmatic state pattern worth discussing.",
+                                                      "x":  "Bridged components without prop-drilling",
+                                                      "y":  "one command surface driving all canvas ops from anywhere",
+                                                      "z":  "publishing a canvasActions bridge consumed by toolbar siblings"
+                                                  },
+                                                  {
+                                                      "bullet":  "Managed layers (add/remove/rename/visibility, minimum-one guard) with honest metadata-only scoping documented in-repo.",
+                                                      "x":  "Managed layers with honest scoping",
+                                                      "y":  "add/remove/rename/visibility with documented metadata limits",
+                                                      "z":  "building layer state with guards and caveated docs"
+                                                  },
+                                                  {
+                                                      "bullet":  "Aimed precisely with a 20px grid overlay that never exports, plus PNG download and image-import-as-background flows.",
+                                                      "x":  "Aimed precisely without polluting exports",
+                                                      "y":  "20px non-exporting grid plus PNG-out and image-in flows",
+                                                      "z":  "drawing grid on overlay only, with object-URL import/export"
+                                                  },
+                                                  {
+                                                      "bullet":  "Picked colors fast (20 swatches plus native picker, 1-50px slider) in a minimal chrome that maximizes canvas space on any screen.",
+                                                      "x":  "Picked colors fast in minimal chrome",
+                                                      "y":  "20 swatches plus picker and slider; canvas-first layout",
+                                                      "z":  "composing palette, slider, and responsive layout around the art"
+                                                  },
+                                                  {
+                                                      "bullet":  "Survived resizes (container-measured canvas with listener cleanup) and confirm-guarded destructive clears.",
+                                                      "x":  "Survived resizes and misclicks",
+                                                      "y":  "measured resizing with cleanup; guarded clears",
+                                                      "z":  "syncing canvas size to container with confirm gates"
+                                                  },
+                                                  {
+                                                      "bullet":  "Shipped proof, not promises (Demo.mp4 walkthrough plus screenshot) across 5 commits of React 18 hooks architecture.",
+                                                      "x":  "Shipped proof with the code",
+                                                      "y":  "video demo plus screenshot in 5 commits",
+                                                      "z":  "recording the walkthrough and documenting honestly"
+                                                  },
+                                                  {
+                                                      "bullet":  "Separated concerns (App state, Canvas engine, palettes, TopBar, useCanvas/useHistory hooks) so each piece is explainable in interviews.",
+                                                      "x":  "Separated concerns interview-cleanly",
+                                                      "y":  "5 components plus 2 custom hooks with single jobs",
+                                                      "z":  "splitting state, engine, tools, and history into dedicated units"
+                                                  },
+                                                  {
+                                                      "bullet":  "Scoped honesty (single-user, layers metadata-only) directly in docs: the same integrity pattern across the portfolio.",
+                                                      "x":  "Scoped honesty directly in docs",
+                                                      "y":  "single-user and layer limits stated, not hidden",
+                                                      "z":  "documenting caveats where users will find them"
+                                                  },
+                                                  {
+                                                      "bullet":  "Covered 4 browsers (Chrome 60+, Firefox 55+, Safari 12+, Edge 79+) with standard Canvas APIs and no exotic dependencies.",
+                                                      "x":  "Covered 4 browsers with standard APIs",
+                                                      "y":  "Chrome/Firefox/Safari/Edge ranges stated and met",
+                                                      "z":  "sticking to stable Canvas APIs with Create-React-App tooling"
+                                                  },
+                                                  {
+                                                      "bullet":  "Cursor-matched every tool (crosshair draw, grab eraser, text caret) so the pointer always tells the truth.",
+                                                      "x":  "Matched cursors to tools",
+                                                      "y":  "per-tool pointer semantics across the canvas",
+                                                      "z":  "switching cursor styles with the active tool"
+                                                  },
+                                                  {
+                                                      "bullet":  "Kept history memory-bounded (20-snapshot cap with shift eviction) so long sessions never bloat the tab.",
+                                                      "x":  "Kept history memory-bounded",
+                                                      "y":  "20-snapshot cap with oldest-first eviction",
+                                                      "z":  "capping the stack with shift-on-overflow logic"
+                                                  },
+                                                  {
+                                                      "bullet":  "Imported images as backgrounds (object URLs drawn full-canvas into history) for tracing and remix workflows.",
+                                                      "x":  "Imported images as traceable backgrounds",
+                                                      "y":  "full-canvas image placement captured in undo history",
+                                                      "z":  "loading object URLs into the art with history capture"
+                                                  },
+                                                  {
+                                                      "bullet":  "Built it MIT-open with install-to-localhost docs, so evaluators draw within minutes of cloning.",
+                                                      "x":  "Made evaluators draw within minutes",
+                                                      "y":  "clone-to-localhost docs with demo video",
+                                                      "z":  "packaging CRA setup with recorded proof"
+                                                  },
+                                                  {
+                                                      "bullet":  "Demonstrated real graphics programming (compositing modes, overlay architecture, snapshot history, pointer normalization) beyond tutorial React.",
+                                                      "x":  "Demonstrated real graphics programming",
+                                                      "y":  "compositing, overlays, snapshots, and normalization in one app",
+                                                      "z":  "going past component tutorials into canvas engineering"
+                                                  }
+                                              ],
+                              "id":  "whiteboard-app",
+                              "keywords":  [
+                                               "React",
+                                               "Canvas API",
+                                               "hooks",
+                                               "undo/redo",
+                                               "touch",
+                                               "layers"
+                                           ],
+                              "llm_brief":  "React 18 + raw Canvas drawing app (399-line engine, 5 commits, Demo.mp4): 6 tools with true destination-out erasing, dual-canvas rubber-band previews, 20-step snapshot undo/redo with global shortcuts, inline text tool, mouse+touch parity, 20px non-exporting grid, PNG export, image import, layer management, and a window.canvasActions component bridge. MIT.",
+                              "metrics":  {
+                                              "canvas_lines":  399,
+                                              "commits":  5,
+                                              "grid_px":  20,
+                                              "history_steps":  20,
+                                              "swatches":  20,
+                                              "tools":  6
+                                          },
+                              "name":  "Whiteboard-APP",
+                              "repo_url":  "https://github.com/chirag-gupta7/Whiteboard-APP",
+                              "role":  "Sole builder",
+                              "stack":  [
+                                            "React 18",
+                                            "HTML5 Canvas",
+                                            "hooks (useHistory, useCanvas)",
+                                            "Create React App"
+                                        ],
+                              "tagline":  "Canvas whiteboard with true erasing and 20-step history",
+                              "type":  "project"
+                          },
+                          {
+                              "xyz_bullets":  [
+                                                  {
+                                                      "bullet":  "Generated QR codes instantly as you type (200/400/800px, EC levels L/M/Q/H) in a strictly-typed React + TypeScript studio.",
+                                                      "x":  "Generated QR codes instantly as you type",
+                                                      "y":  "3 sizes and 4 EC levels, fully typed end to end",
+                                                      "z":  "building a strict-TS studio on the qrcode library"
+                                                  },
+                                                  {
+                                                      "bullet":  "Embedded logos that still scan (20 percent-width mark on a white contrast plate, exploiting the Reed-Solomon EC budget) with live preview and removal.",
+                                                      "x":  "Embedded logos that still scan",
+                                                      "y":  "20 percent center mark on contrast plate within EC tolerance",
+                                                      "z":  "compositing logos on offscreen canvas inside the error budget"
+                                                  },
+                                                  {
+                                                      "bullet":  "Exported both ways (timestamped PNG downloads plus regenerated vector SVGs via Blob/file-saver) for screen and print.",
+                                                      "x":  "Exported for screen and print",
+                                                      "y":  "timestamped PNGs plus true vector SVGs",
+                                                      "z":  "downloading data URLs and regenerating SVG strings via Blob"
+                                                  },
+                                                  {
+                                                      "bullet":  "Batch-generated from CSV (text/url/content column fallback chain, 100ms staggered queue, per-row error alerts) for bulk campaigns.",
+                                                      "x":  "Batch-generated from CSV for bulk campaigns",
+                                                      "y":  "3-header fallback, staggered queue, per-row error handling",
+                                                      "z":  "parsing with PapaParse and throttling generation per row"
+                                                  },
+                                                  {
+                                                      "bullet":  "Remembered everything (10-item localStorage history with full option snapshots, one-click restore, clear control) across sessions.",
+                                                      "x":  "Remembered everything across sessions",
+                                                      "y":  "10-item persisted history with one-click full restore",
+                                                      "z":  "snapshotting text plus options to localStorage with rehydrate"
+                                                  },
+                                                  {
+                                                      "bullet":  "Synced dual color controls (native picker plus hex field, foreground and background) so designers type or click interchangeably.",
+                                                      "x":  "Synced dual color controls",
+                                                      "y":  "picker and hex field locked together for both channels",
+                                                      "z":  "binding both inputs to one color state per channel"
+                                                  },
+                                                  {
+                                                      "bullet":  "Shortened URLs before encoding (regex-detected, optional toggle, mock service with original-URL fallback) to keep codes scannable.",
+                                                      "x":  "Shortened URLs before encoding",
+                                                      "y":  "denser codes via optional shortening with safe fallback",
+                                                      "z":  "detecting URLs and routing through a shortener seam"
+                                                  },
+                                                  {
+                                                      "bullet":  "Marked the shortener honestly as a mock integration seam (documented bit.ly swap-in) instead of fake functionality.",
+                                                      "x":  "Marked the mock honestly",
+                                                      "y":  "integration seam documented with real-service swap path",
+                                                      "z":  "flagging the stub and specifying the production replacement"
+                                                  },
+                                                  {
+                                                      "bullet":  "Blocked empty generation (disabled button, generating spinner state, try/catch alerts) so no blank codes ever render.",
+                                                      "x":  "Blocked empty generation",
+                                                      "y":  "disabled states, spinner, and alerts guard every path",
+                                                      "z":  "gating submits on trimmed input with loading and error states"
+                                                  },
+                                                  {
+                                                      "bullet":  "Defined the domain in types (QRCodeOptions and HistoryItem interfaces, EC-level unions) catching misuse at compile time.",
+                                                      "x":  "Defined the domain in types",
+                                                      "y":  "option unions and history shapes enforced by tsc",
+                                                      "z":  "modeling options and history as strict TypeScript interfaces"
+                                                  },
+                                                  {
+                                                      "bullet":  "Supported 4 browsers (Chrome 88+, Firefox 85+, Safari 14+, Edge 88+) with responsive desktop/tablet/mobile layouts.",
+                                                      "x":  "Supported 4 browsers on all screens",
+                                                      "y":  "stated version floors plus responsive layouts",
+                                                      "z":  "using standard web APIs with adaptive CSS"
+                                                  },
+                                                  {
+                                                      "bullet":  "Onboarded Windows users in one click (install.bat, setup.bat, start.bat) alongside npm flows and MIT licensing.",
+                                                      "x":  "Onboarded Windows users in one click",
+                                                      "y":  "3 batch scripts plus npm parity, MIT licensed",
+                                                      "z":  "scripting install/setup/start for non-terminal users"
+                                                  },
+                                                  {
+                                                      "bullet":  "Published a decision-grade README (EC-level table with use cases, PNG-vs-SVG guide, logo rules, CSV spec, troubleshooting) users actually read.",
+                                                      "x":  "Published a decision-grade README",
+                                                      "y":  "EC tables, format guides, and specs answer questions preemptively",
+                                                      "z":  "documenting trade-offs, formats, and failure recovery"
+                                                  },
+                                                  {
+                                                      "bullet":  "Recovered from failures explicitly (CSV parse alerts, SVG alerts, generation alerts, shortener fallback) with no silent drops.",
+                                                      "x":  "Recovered from failures explicitly",
+                                                      "y":  "every async path has an alert or fallback; nothing vanishes",
+                                                      "z":  "wrapping generation, parsing, and shortening in guarded flows"
+                                                  },
+                                                  {
+                                                      "bullet":  "Restored history items fully (text plus options plus image re-applied on Use) instead of partial recall.",
+                                                      "x":  "Restored history fully, not partially",
+                                                      "y":  "Use re-applies text, options, and image together",
+                                                      "z":  "rehydrating the complete generation state per item"
+                                                  },
+                                                  {
+                                                      "bullet":  "Kept the single-file architecture readable (504-line App with co-located styles) while staying strictly typed throughout.",
+                                                      "x":  "Kept 504 lines readable and typed",
+                                                      "y":  "one cohesive component with full type coverage",
+                                                      "z":  "co-locating logic and UI without abandoning strictness"
+                                                  },
+                                                  {
+                                                      "bullet":  "Chose battle-tested libs (qrcode, file-saver, PapaParse) over hand-rolling encoders, showing dependency judgment.",
+                                                      "x":  "Chose battle-tested libs over hand-rolling",
+                                                      "y":  "3 focused deps instead of a custom encoder",
+                                                      "z":  "delegating encoding, saving, and parsing to proven packages"
+                                                  },
+                                                  {
+                                                      "bullet":  "Shipped it in 1 commit as a complete studio (generation, branding, batch, history, docs) proving end-to-end finishing.",
+                                                      "x":  "Shipped a complete studio in 1 commit",
+                                                      "y":  "generation plus branding plus batch plus history in one landing",
+                                                      "z":  "landing the whole feature set cohesively at once"
+                                                  },
+                                                  {
+                                                      "bullet":  "Gave every option a sensible default (400px, EC-M, black-on-white) so first-run users succeed before touching a control.",
+                                                      "x":  "Gave every option a sensible default",
+                                                      "y":  "first-run success with zero configuration",
+                                                      "z":  "defaulting size, EC level, and colors to safe values"
+                                                  },
+                                                  {
+                                                      "bullet":  "Proved TypeScript React productcraft (types, state, effects, refs, async flows, persistence) in a tool people genuinely reuse.",
+                                                      "x":  "Proved TypeScript React productcraft",
+                                                      "y":  "types plus hooks plus persistence in a reusable tool",
+                                                      "z":  "combining interfaces, effects, and storage into polished UX"
+                                                  }
+                                              ],
+                              "id":  "qr-code-generator",
+                              "keywords":  [
+                                               "React",
+                                               "TypeScript",
+                                               "qrcode",
+                                               "PapaParse",
+                                               "file-saver",
+                                               "SVG",
+                                               "localStorage",
+                                               "batch"
+                                           ],
+                              "llm_brief":  "Strictly-typed React + TypeScript QR studio (504-line App, 1 commit, MIT): instant generation (200/400/800px, EC L/M/Q/H), scannable 20 percent logo embedding on contrast plates, PNG + regenerated SVG export, PapaParse CSV batch with staggered queue, 10-item localStorage history with full restore, honest mock shortener seam, .bat onboarding, decision-grade README.",
+                              "metrics":  {
+                                              "app_lines":  504,
+                                              "commits":  1,
+                                              "ec_levels":  4,
+                                              "history_items":  10,
+                                              "logo_pct":  20,
+                                              "sizes":  3
+                                          },
+                              "name":  "QR-Code-Generator",
+                              "repo_url":  "https://github.com/chirag-gupta7/QR-Code-Generator",
+                              "role":  "Sole builder",
+                              "stack":  [
+                                            "React 18",
+                                            "TypeScript 4",
+                                            "qrcode",
+                                            "file-saver",
+                                            "PapaParse"
+                                        ],
+                              "tagline":  "Typed QR studio with logo embedding and CSV batch",
+                              "type":  "project"
+                          },
+                          {
+                              "id": "labmentix-digital-media-player",
+                              "name": "Digital Media Player",
+                              "type": "project",
+                              "repo_url": "https://github.com/nitendranagupta/digital_media_player",
+                              "description": "Full-stack music and podcast streaming app with authentication, byte-range playback/seeking, uploads, playlists, search, queue controls, recent playback, and audio visualization.",
+                              "stack": [
+                                  "React",
+                                  "Tailwind CSS",
+                                  "Axios",
+                                  "React Icons",
+                                  "Web Audio API",
+                                  "Flask",
+                                  "Flask-JWT-Extended",
+                                  "Flask-SQLAlchemy",
+                                  "Flask-CORS",
+                                  "SQLite (development)"
+                              ],
+                              "attribution": {
+                                  "labmentix_association": "Candidate-reported; candidate says this project was worked on during the Labmentix internship.",
+                                  "repository_account": "nitendranagupta; candidate identifies this as the project coordinator's GitHub account, not the candidate's personal account.",
+                                  "candidate_contribution": "Candidate reports participation; specific individual responsibilities are not supplied or verified."
+                              },
+                              "evidence": [
+                                  "Public repository README reviewed 2026-10-28 for project-level description/stack only; it does not establish candidate-specific contribution."
+                              ]
+                          },
+                          {
+                              "id": "labmentix-cloud-storage",
+                              "name": "Cloud Storage",
+                              "type": "project",
+                              "repo_url": "https://github.com/nitendranagupta/cloud_storage",
+                              "description": "Full-stack file-storage app with authenticated uploads, folders, previews/downloads, search, sharing links, and trash/restore.",
+                              "stack": [
+                                  "React 19",
+                                  "Vite",
+                                  "Tailwind CSS",
+                                  "React Router",
+                                  "React Query",
+                                  "Axios",
+                                  "React Dropzone",
+                                  "Lucide Icons",
+                                  "FastAPI",
+                                  "SQLAlchemy",
+                                  "PostgreSQL",
+                                  "Supabase Storage",
+                                  "JWT (python-jose/passlib/bcrypt)"
+                              ],
+                              "attribution": {
+                                  "labmentix_association": "Candidate-reported; candidate says this project was worked on during the Labmentix internship.",
+                                  "repository_account": "nitendranagupta; candidate identifies this as the project coordinator's GitHub account, not the candidate's personal account.",
+                                  "candidate_contribution": "Candidate reports participation; specific individual responsibilities are not supplied or verified."
+                              },
+                              "evidence": [
+                                  "Public repository README reviewed 2026-10-28 for project-level description/stack only; it does not establish candidate-specific contribution."
+                              ]
+                          },
+                          {
+                              "id": "labmentix-document-signature",
+                              "name": "Document Signature",
+                              "type": "project",
+                              "repo_url": "https://github.com/nitendranagupta/seal_desk",
+                              "description": "PDF-signing workflow with document upload, signature-field placement, signer invitations, typed signature capture, signed-PDF generation, status tracking, and audit events.",
+                              "stack": [
+                                  "FastAPI",
+                                  "React",
+                                  "SQLAlchemy",
+                                  "PyMuPDF",
+                                  "JWT",
+                                  "Docker"
+                              ],
+                              "attribution": {
+                                  "labmentix_association": "Candidate-reported; candidate says this project was worked on during the Labmentix internship.",
+                                  "repository_account": "nitendranagupta; candidate identifies this as the project coordinator's GitHub account, not the candidate's personal account.",
+                                  "candidate_contribution": "Candidate reports participation; specific individual responsibilities are not supplied or verified."
+                              },
+                              "evidence": [
+                                  "Public repository README reviewed 2026-10-28 for project-level description/stack only; it does not establish candidate-specific contribution."
+                              ],
+                              "documentation_notes": "Repository documentation conflicts on drawn/uploaded signatures: overview text lists them as features, while the README next-production-steps section lists them as future work; not treated as confirmed shipped functionality."
+                          },
+                          {
+                              "id": "labmentix-1on1-mentor-app",
+                              "name": "1-on-1 Mentor App",
+                              "type": "project",
+                              "repo_url": "https://github.com/nitendranagupta/1on1_mentoring_platform",
+                              "description": "Real-time mentor/student platform for scheduled sessions, video calls, persistent chat, collaborative Monaco editing, cursor presence, and code snapshots.",
+                              "stack": [
+                                  "Next.js 15",
+                                  "TypeScript",
+                                  "Tailwind CSS",
+                                  "FastAPI",
+                                  "Python 3.12+",
+                                  "PostgreSQL 16",
+                                  "SQLAlchemy 2.0 async",
+                                  "FastAPI WebSockets",
+                                  "Monaco Editor",
+                                  "WebRTC",
+                                  "Zustand",
+                                  "JWT (python-jose)",
+                                  "Yjs"
+                              ],
+                              "attribution": {
+                                  "labmentix_association": "Candidate-reported; candidate says this project was worked on during the Labmentix internship.",
+                                  "repository_account": "nitendranagupta; candidate identifies this as the project coordinator's GitHub account, not the candidate's personal account.",
+                                  "candidate_contribution": "Candidate reports participation; specific individual responsibilities are not supplied or verified."
+                              },
+                              "evidence": [
+                                  "Public repository README reviewed 2026-10-28 for project-level description/stack only; it does not establish candidate-specific contribution."
+                              ]
+                          },
+                          {
+                              "id": "labmentix-ai-data-analysis-dashboard",
+                              "name": "AI Data Analysis Dashboard",
+                              "type": "project",
+                              "repo_url": "https://github.com/nitendranagupta/AI_data_analysis_dashboard",
+                              "description": "Dataset-analysis app for file upload, natural-language questions, generated insights/charts, dashboards, and data export.",
+                              "stack": [
+                                  "Next.js 15",
+                                  "TypeScript",
+                                  "Tailwind CSS",
+                                  "Shadcn UI",
+                                  "Recharts",
+                                  "TanStack Query",
+                                  "Zustand",
+                                  "FastAPI",
+                                  "Uvicorn",
+                                  "Pydantic",
+                                  "SQLAlchemy 2.0",
+                                  "Alembic",
+                                  "PostgreSQL 16",
+                                  "Redis 7",
+                                  "Celery",
+                                  "OpenAI GPT-4 Turbo (README)",
+                                  "LangChain",
+                                  "Instructor",
+                                  "Google Gemini (About text)",
+                                  "Docker",
+                                  "Docker Compose",
+                                  "Nginx",
+                                  "Prometheus",
+                                  "Grafana"
+                              ],
+                              "attribution": {
+                                  "labmentix_association": "Candidate-reported; candidate says this project was worked on during the Labmentix internship.",
+                                  "repository_account": "nitendranagupta; candidate identifies this as the project coordinator's GitHub account, not the candidate's personal account.",
+                                  "candidate_contribution": "Candidate reports participation; specific individual responsibilities are not supplied or verified."
+                              },
+                              "evidence": [
+                                  "Public repository README reviewed 2026-10-28 for project-level description/stack only; it does not establish candidate-specific contribution."
+                              ],
+                              "documentation_notes": "Provider documentation conflicts: repository About text names Google Gemini, while README Tech Stack/architecture names OpenAI GPT-4 Turbo, LangChain, and Instructor. No provider choice inferred."
+                          },
+                          {
+                              "id": "labmentix-social-media-platform",
+                              "name": "Social Media Platform",
+                              "type": "project",
+                              "repo_url": "https://github.com/nitendranagupta/postit",
+                              "description": "Reddit-style social platform with communities, posts, comments/replies, voting, profiles, search, image uploads, and authentication.",
+                              "stack": [
+                                  "Next.js 15",
+                                  "TypeScript",
+                                  "Tailwind CSS",
+                                  "Axios",
+                                  "React Query",
+                                  "React Hook Form",
+                                  "Zod",
+                                  "FastAPI",
+                                  "SQLAlchemy",
+                                  "PostgreSQL",
+                                  "Alembic",
+                                  "JWT",
+                                  "Passlib/bcrypt",
+                                  "Cloudinary"
+                              ],
+                              "attribution": {
+                                  "labmentix_association": "Candidate-reported; candidate says this project was worked on during the Labmentix internship.",
+                                  "repository_account": "nitendranagupta; candidate identifies this as the project coordinator's GitHub account, not the candidate's personal account.",
+                                  "candidate_contribution": "Candidate reports participation; specific individual responsibilities are not supplied or verified."
+                              },
+                              "evidence": [
+                                  "Public repository README reviewed 2026-10-28 for project-level description/stack only; it does not establish candidate-specific contribution."
+                              ]
+                          },
+                          {
+                              "id": "labmentix-phishing-scam-detector",
+                              "name": "Phishing / Scam Detector",
+                              "type": "project",
+                              "repo_url": "https://github.com/nitendranagupta/Phishguard",
+                              "description": "Cybersecurity app for URL and phishing-email analysis using threat-intelligence lookups, AI classification, risk scoring, scan history, dashboards, and reports.",
+                              "stack": [
+                                  "Next.js 15",
+                                  "TypeScript",
+                                  "Tailwind CSS",
+                                  "Recharts",
+                                  "FastAPI",
+                                  "Python",
+                                  "SQLAlchemy",
+                                  "Alembic",
+                                  "PostgreSQL",
+                                  "Redis",
+                                  "JWT",
+                                  "bcrypt",
+                                  "Gemini API",
+                                  "VirusTotal",
+                                  "Google Safe Browsing",
+                                  "Docker",
+                                  "Docker Compose"
+                              ],
+                              "attribution": {
+                                  "labmentix_association": "Candidate-reported; candidate says this project was worked on during the Labmentix internship.",
+                                  "repository_account": "nitendranagupta; candidate identifies this as the project coordinator's GitHub account, not the candidate's personal account.",
+                                  "candidate_contribution": "Candidate reports participation; specific individual responsibilities are not supplied or verified."
+                              },
+                              "evidence": [
+                                  "Public repository README reviewed 2026-10-28 for project-level description/stack only; it does not establish candidate-specific contribution."
+                              ]
+                          }
+                      ],
+    "how_to_use_this_file":  "PART 3 of 3 (full-profile.json + internships.json + projects). Flagship + notable projects beyond the 4 flagships (which carry 80 XYZ bullets in this same file\u0027s \u0027flagships\u0027 array). Feed all three files to any LLM. Keep only verifiable claims."
+}

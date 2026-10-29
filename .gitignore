@@ -1,0 +1,41 @@
+﻿# Dependencies
+node_modules/
+bun.lock
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# Environment / secrets
+.env
+.env.local
+.env*.local
+**/.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Databases
+*.db
+*.db-wal
+*.db-shm
+
+# Nested repo (separate project with its own remote)
+tools/career-ops/
+
+# Temp / scratch
+.tmp*/
+*.tmp*
+*.bak*

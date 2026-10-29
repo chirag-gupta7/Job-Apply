@@ -1,0 +1,275 @@
+﻿{
+    "availability":  "Available to start an internship immediately. Full-time employment possible after graduation in June 2027.",
+    "awards_recognitions":  [
+                                "Code Red Hackathon - Team Leader - placement-level result (led team build and pitch)",
+                                "Meta Mind Hackathon 2025 - Participant (VGU Jaipur, 17/11/2025)",
+                                "Academic standing: 9.13 CGPA through 4 semesters (O grades in DBMS, Data Science, ML, Networks, Business Intelligence, Web Development)",
+                                "Axlerator certificate cites \u0027exceptional diligence, technical skill, and commitment\u0027 (ref 00612)",
+                                "Heart-disease detection ML model (0.946 AUC) + MCP research paper"
+                            ],
+    "bios":  {
+                 "cover_letter_opening":  "I am a backend-focused computer science student (Bachelor in computer science \u002727, CGPA 9.13/10) with hands-on internship experience optimizing PostgreSQL performance in production codebases and building secure REST APIs with Python and Node.js. As a Meta-certified Back-End Developer and Google-certified cybersecurity professional, I bring both the engineering craft to ship features and the security mindset to ship them safely.",
+                 "linkedin_about":  "I build backend systems: REST APIs, authentication flows, and databases that stay fast under load. I interned as a Backend Engineer at Axlerator, where I normalized a PostgreSQL schema used across core product tables and cut query times on the highest-traffic tables from 4-5 seconds to about 1 second. At Grozoom Ventures I built a Python security-automation client that reverse-engineered obfuscated JavaScript and defeated layered anti-bot defenses (AES-CBC encryption, proof-of-work challenges) to automate a six-stage registration pipeline end-to-end. At Cognifyz Technologies I built web scrapers, an automated data-cleaning pipeline, and an interactive data-visualization tool. My projects include TypeMaster (gamified typing platform with sub-16ms responses, Redis caching, rate limiting and CI/CD), SmartMeet AI (voice-controlled calendar assistant integrating GPT-4 and Google Calendar with OAuth2/JWT), and TaskFlow API (role-based task management API). Certifications: Meta Back-End Developer, Google Cybersecurity, Google Cloud Cybersecurity, Google Project Management, Programming with Google Go (UC Irvine), Advanced Network Security (LearnQuest), Introduction to Cyber Security (NYU), Generative AI SQL Database Specialist with ChatGPT (Vanderbilt), and AWS Academy Cloud Foundations. Currently pursuing Bachelor in computer science at Vivekananda Global University, Jaipur (Class of 2027, CGPA 9.13/10). Open to backend / software engineering internships and entry-level roles.",
+                 "linkedin_headline":  "Backend Developer (Python | Node.js | Go) | Meta Back-End Developer Certified | Google Cybersecurity \u0026 Cloud Security Certified | Bachelor in computer science \u002727 | CGPA 9.13",
+                 "professional_summary":  "Backend-focused Bachelor in computer science student (VGU Jaipur, graduating Jun 2027) with internship experience across backend engineering, security automation, Python development, and Python trading-tool development at PrimeTrade. Meta-certified Back-End Developer; Google-certified in Cybersecurity, Cloud Cybersecurity, and Project Management. Built and deployed TypeMaster, a full-stack gamified typing platform (Next.js, Express, PostgreSQL/Prisma) with a 200-lesson curriculum, plus SmartMeet-AI (voice + LLM + Google Calendar) and a hybrid ML heart-disease classifier (0.946 AUC). Strong in Python, REST APIs, PostgreSQL, Docker, and applied security (AES-CBC, proof-of-work automation). Seeking backend/software engineering internships - available immediately.",
+                 "short_bio":  "Backend developer building APIs with Python, Node.js and Go. Meta Back-End Developer certified; Google-certified in Cybersecurity and Cloud Security. Bachelor in computer science @ VGU Jaipur (2027), CGPA 9.13.",
+                 "video_intro_script_45s":  "Hi, I\u0027m Chirag, a Computer Science student at Vivekananda Global University, Jaipur. I build backends: I\u0027ve shipped TypeMaster, a live typing platform with a 200-lesson curriculum used React, Node, and PostgreSQL, and SmartMeet-AI, a voice assistant that turns speech into Google Calendar events using LLMs. My internship experience includes production database work at Axlerator, security automation at Grozoom Ventures, Python development at Cognifyz Technologies, and Python trading tools at PrimeTrade. I\u0027m Meta-certified in backend development and Google-certified in cybersecurity. I\u0027m looking for backend engineering internships where I can ship real features from week one. Thanks for watching!",
+                 "why_hire_me":  [
+                                     "Shipped production DB schema migrations + 4-5s-to-1s query optimization at Axlerator",
+                                     "Security-automation internship: reverse-engineered obfuscated JS, AES-CBC, proof-of-work (Grozoom Ventures)",
+                                     "Data-engineering internship: scrapers, pandas cleaning pipelines, interactive visualization tool (Cognifyz)",
+                                     "Built 3 complete backend projects: APIs, OAuth2/JWT auth, caching, CI/CD, Docker",
+                                     "12 certifications across backend dev, security, cloud, and project management",
+                                     "Hackathon team leader (placement-level result); ML research (0.946 AUC)"
+                                 ]
+             },
+    "certifications_headline":  [
+                                    {
+                                        "date":  "Feb 2026",
+                                        "id":  "MF1QUQGZG12I",
+                                        "issuer":  "Meta",
+                                        "name":  "Meta Back-End Developer",
+                                        "type":  "Professional Certificate",
+                                        "verify":  "https://coursera.org/verify/professional-cert/MF1QUQGZG12I"
+                                    },
+                                    {
+                                        "date":  "Feb 2026",
+                                        "id":  "S1AH29EQBYKL",
+                                        "issuer":  "Google",
+                                        "name":  "Google Cybersecurity",
+                                        "type":  "Professional Certificate",
+                                        "verify":  "https://coursera.org/verify/professional-cert/S1AH29EQBYKL"
+                                    },
+                                    {
+                                        "date":  "Aug 2026",
+                                        "id":  "LTLO8JSX5H7H",
+                                        "issuer":  "Google Cloud",
+                                        "name":  "Google Cloud Cybersecurity",
+                                        "type":  "Professional Certificate",
+                                        "verify":  "https://coursera.org/verify/professional-cert/LTLO8JSX5H7H"
+                                    },
+                                    {
+                                        "date":  "Mar 2026",
+                                        "id":  "0XPIZEFKQ9QJ",
+                                        "issuer":  "Google",
+                                        "name":  "Google Project Management",
+                                        "type":  "Professional Certificate",
+                                        "verify":  "https://coursera.org/verify/professional-cert/0XPIZEFKQ9QJ"
+                                    },
+                                    {
+                                        "date":  "Feb 2026",
+                                        "id":  "AHIWRVB16RHP",
+                                        "issuer":  "UC Irvine",
+                                        "name":  "Programming with Google Go",
+                                        "type":  "Specialization",
+                                        "verify":  "https://coursera.org/verify/specialization/AHIWRVB16RHP"
+                                    },
+                                    {
+                                        "date":  "Aug 2026",
+                                        "id":  "OHGIX1P1P8X8",
+                                        "issuer":  "NYU",
+                                        "name":  "Introduction to Cyber Security",
+                                        "type":  "Specialization",
+                                        "verify":  "https://coursera.org/verify/specialization/OHGIX1P1P8X8"
+                                    },
+                                    {
+                                        "date":  "Sep 2025",
+                                        "id":  "G93C71NR8XLX",
+                                        "issuer":  "LearnQuest",
+                                        "name":  "Advanced Network Security",
+                                        "type":  "Specialization",
+                                        "verify":  "https://coursera.org/verify/specialization/G93C71NR8XLX"
+                                    },
+                                    {
+                                        "date":  "Sep 2025",
+                                        "id":  "7WPB9DEPEGL8",
+                                        "issuer":  "Vanderbilt",
+                                        "name":  "Generative AI SQL Database Specialist with ChatGPT",
+                                        "type":  "Specialization",
+                                        "verify":  "https://coursera.org/verify/specialization/7WPB9DEPEGL8"
+                                    },
+                                    {
+                                        "date":  "2026",
+                                        "id":  null,
+                                        "issuer":  "AWS Academy",
+                                        "name":  "AWS Academy Graduate - Cloud Foundations (badge + Credly)",
+                                        "type":  "Training badge",
+                                        "verify":  null
+                                    },
+                                    {
+                                        "date":  null,
+                                        "id":  null,
+                                        "issuer":  "Forage",
+                                        "name":  "AWS Solutions Architecture Job Simulation",
+                                        "type":  "Simulation",
+                                        "verify":  null
+                                    },
+                                    {
+                                        "date":  null,
+                                        "id":  null,
+                                        "issuer":  "IBM",
+                                        "name":  "Prompt Engineering",
+                                        "type":  "Course",
+                                        "verify":  null
+                                    },
+                                    {
+                                        "date":  null,
+                                        "id":  null,
+                                        "issuer":  "LinkedIn Learning",
+                                        "name":  "Microsoft Security Essentials (+14 more LinkedIn certs: Power BI, Prompt Engineering, Systems Thinking, data/analytics bundle)",
+                                        "type":  "Courses",
+                                        "verify":  null
+                                    }
+                                ],
+    "certifications_note":  "77 verified credentials total on Coursera/LinkedIn/Credly (53 individual courses + specializations + 5 professional certificates + LinkedIn bundle). Above are the 12 headline ones; full per-course verify URLs live in certificate_master_export.",
+    "contact":  {
+                    "email":  "chirag15470956@gmail.com",
+                    "github":  "https://github.com/chirag-gupta7",
+                    "linkedin":  "https://linkedin.com/in/chirag-ok-gupta",
+                    "phone":  "+91 90442 06042",
+                    "portfolio":  "https://chirag-portfolio-new.vercel.app/"
+                },
+    "education":  {
+                      "cgpa":  "9.13/10 (Semesters 1-4; 93 credits)",
+                      "coursework":  [
+                                         "DBMS",
+                                         "Operating Systems",
+                                         "Computer Networks",
+                                         "Cryptography \u0026 Network Security",
+                                         "Machine Learning",
+                                         "Principles of AI",
+                                         "Business Intelligence",
+                                         "Data Science",
+                                         "Cloud Web Services",
+                                         "Python",
+                                         "Java OOP",
+                                         "Data Structures in C"
+                                     ],
+                      "degree":  "Bachelor in computer science",
+                      "graduation":  "June 2027",
+                      "sgpa":  {
+                                   "sem1":  9.43,
+                                   "sem2":  8.24,
+                                   "sem3":  9.32,
+                                   "sem4":  9.39
+                               },
+                      "university":  "Vivekananda Global University, Jaipur (2023-2027)"
+                  },
+    "how_to_use_this_file":  "PART 1 of 3 (profile + internships.json + projects.json). Everything about Chirag Gupta in one place: identity, education, skills, certifications, bios, preferences. Feed all three files to any LLM for resumes, cover letters, bios, or interview prep. Keep only verifiable claims; tailor keywords to the job post.",
+    "identity":  {
+                     "city":  "Jaipur, Rajasthan, India",
+                     "dob":  "30 March 2007",
+                     "name":  "Chirag Gupta",
+                     "name_on_certificates":  "Chirag",
+                     "timezone":  "IST (UTC+5:30)"
+                 },
+    "languages":  [
+                      "English - fluent (speak, read, write)",
+                      "Hindi - fluent (speak, read, write)"
+                  ],
+    "matching_job_titles":  [
+                                "Backend Developer",
+                                "Backend Engineer",
+                                "Python Developer",
+                                "Software Engineer (Backend)",
+                                "API Developer",
+                                "Python Automation Engineer",
+                                "Full Stack Developer (entry)",
+                                "Go Developer (junior)",
+                                "Cybersecurity Analyst (entry)",
+                                "SOC Analyst Tier 1",
+                                "Cloud Security Analyst (entry)",
+                                "Information Security Analyst",
+                                "Junior Project Coordinator"
+                            ],
+    "open_items":  [
+                       "Collect 1-2 references (Axlerator mentor Pranshu, VGU professor)",
+                       "Get Grozoom Ventures proof (dates + letter; flag CTF{Advanced_Python_Automation_Master_2025} recorded)",
+                       "Cross-check CGPA 9.13 against official transcript once",
+                       "Class 10/12 %, board, year; JEE scores if any"
+                   ],
+    "positions_of_responsibility":  [
+                                        "Team Leader - Code Red Hackathon: led team build and pitch to a placement-level result"
+                                    ],
+    "preferences":  {
+                        "relocation":  "Anywhere (remote/hybrid/onsite, any location); available immediately",
+                        "salary":  "Starting expectation 6 LPA; flexible per the job description and role band",
+                        "shifts":  "Anytime (day/evening/night); available to start immediately, in any location",
+                        "work_auth":  "India authorized; abroad-remote contractor roles need no sponsorship"
+                    },
+    "skills":  {
+                   "ai_data":  [
+                                   "pandas",
+                                   "NumPy",
+                                   "matplotlib",
+                                   "seaborn",
+                                   "Plotly",
+                                   "OpenAI GPT-4",
+                                   "Gemini",
+                                   "Llama-3",
+                                   "prompt engineering",
+                                   "web scraping (BeautifulSoup, Requests)",
+                                   "ETL pipelines",
+                                   "data cleaning"
+                               ],
+                   "backend":  [
+                                   "Python",
+                                   "Flask",
+                                   "Django REST Framework",
+                                   "FastAPI",
+                                   "Node.js",
+                                   "Express.js",
+                                   "REST API design",
+                                   "JWT",
+                                   "OAuth2",
+                                   "Go (Golang)",
+                                   "TypeScript"
+                               ],
+                   "data_databases":  [
+                                          "PostgreSQL",
+                                          "MySQL",
+                                          "SQLite",
+                                          "Redis",
+                                          "SQLAlchemy",
+                                          "Prisma ORM",
+                                          "query optimization",
+                                          "indexing"
+                                      ],
+                   "devops":  [
+                                  "Docker",
+                                  "Docker Compose",
+                                  "Git/GitHub",
+                                  "GitHub Actions (CI/CD)",
+                                  "Linux",
+                                  "Bash",
+                                  "Postman"
+                              ],
+                   "frontend":  [
+                                    "React",
+                                    "Next.js",
+                                    "Tailwind CSS",
+                                    "HTML/CSS"
+                                ],
+                   "pm_soft":  [
+                                   "Agile",
+                                   "Scrum",
+                                   "stakeholder management",
+                                   "risk management",
+                                   "team leadership (hackathon)"
+                               ],
+                   "security":  [
+                                    "SIEM",
+                                    "IDS/IPS",
+                                    "network security",
+                                    "AES-CBC/PKCS7",
+                                    "SHA-256/MD5",
+                                    "reverse engineering (obfuscated JS)",
+                                    "proof-of-work solving",
+                                    "vulnerability management",
+                                    "incident response",
+                                    "cloud security",
+                                    "NGFW",
+                                    "threat hunting"
+                                ]
+               }
+}

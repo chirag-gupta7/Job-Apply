@@ -1,0 +1,701 @@
+﻿{
+    "how_to_use_this_file":  "PART 2 of 3 (full-profile.json + internships + projects.json). All 6 experience records, with XYZ bullets, metrics, stacks, and evidence where supplied. Feed all three files to any LLM for resumes and cover letters. Keep only verifiable claims.",
+    "meta":  {
+                 "candidate":  "Chirag Gupta",
+                 "count":  6,
+                 "count_note":  "Array record count; not a count of verified employment relationships.",
+                 "format":  "Google XYZ per bullet",
+                 "total_bullets":  52
+             },
+    "experience_blocks":  {
+                              "axlerator_xp1":  "Backend Engineer Intern | Axlerator (truck marketplace startup, Mumbai) | Remote | Jan 2026 - Jun 2026. Cut query times on highest-traffic truck-listing/transaction tables from 4-5s to ~1s via targeted indexes; normalized PostgreSQL schema (~15% faster dev workflow); migrated legacy data in 1-2 days with integrity; designed buyer-seller data model; verified 100+ products. Cert ref 00612 (CGO Raunak Chaudhary); mentor Pranshu.",
+                              "cognifyz_xp2":  "Python Development Intern | Cognifyz Technologies (ISO 9001:2015) | Jaipur, Remote | Nov 2025 - Dec 2025. Configurable web scraper (URL + CSS selectors, dedup, polite delays); pandas cleaning pipeline (dedup + mean/mode imputation, ~40% preprocessing cut); OOP Data Visualization Tool with 6 chart types + static/interactive Plotly toggle. Intern ID CTI/A1/C242826.",
+                              "grozoom_xp3":  "Python/Backend Intern | Grozoom Ventures | Remote | dates TBC. Python automation client reverse-engineering obfuscated JS (AES key/IV recovery), CryptoJS-compatible AES-CBC, arithmetic/sequence/SHA-256 PoW solvers, 6-stage secured registration pipeline end-to-end. Flag CTF{Advanced_Python_Automation_Master_2025}."
+                          },
+    "internships":  [
+                        {
+                            "company":  "Axlerator (truck-selling marketplace startup, Mumbai)",
+                            "dates":  "Jan 2026 - Jun 2026 (Backend Engineer Intern, Remote; certificate ref 00612 issued 05 Jul 2026 by CGO Raunak Chaudhary; mentor: Pranshu)",
+                            "evidence":  [
+                                             "Internships/Axlerator/Acelya Notes (10 talking points: indexing, normalization, migration, workflow, verification, ownership, mentor Pranshu)",
+                                             "Internships/Axlerator/acelerate/Axlerator_m/prisma/schema.prisma (150 lines, 7 models) + prisma/migrations/ (5) + supabase/migrations/001_initial_schema.sql",
+                                             "Internships/Axlerator/acelerate/Axlerator_m/app/api/*/route.ts (12 routes, 14 handlers: contact, inquiries, otp/send, otp/verify, search, truck-submissions, trucks, [id], images, similar, upload-image, valuation)",
+                                             "Internships/Axlerator/acelerate/Axlerator_m/lib/ (otp, otp-verification, sms/twilio, rate-limit, validation 11 schemas, supabase, prisma, seed-data)",
+                                             "Internships/Axlerator/acelerate/Axlerator_m/COPY_THIS_SQL.sql (7 tables + 6 indexes + trigger)",
+                                             "Internships/Axlerator/acelerate/Axlerator_m/scripts/ + seed-all-30-trucks.js (30 trucks) + scripts/insert-8-trucks.js (8 registration-indexed HR trucks)",
+                                             "Internships/Axlerator/acelerate/Axlerator_m/image-upload-mapping.json (741 entries) + hr-folders-upload-mapping.json (279) + per-registration mappings (262)",
+                                             "Internships/Axlerator/acelerate/Axlerator_m/app/sell-truck/page.tsx (2,276 lines) + app/truck/[id]/page.tsx (1,773 lines)",
+                                             "Internships/Axlerator/acelerate/Axlerator_m/mobile-app/ (Expo RN, 5 screens + API service)",
+                                             "Internships/Axlerator/acelerate/Axlerator_m/*.md (33 deployment/troubleshooting docs) + render.yaml + middleware.ts",
+                                             "Internships/Axlerator/Acelya + Axlerator-Internship-Certificate-Chirag.pdf (ref 00612, \u0027exceptional diligence, technical skill, and commitment\u0027)"
+                                         ],
+                            "id":  "axlerator",
+                            "keywords":  [
+                                             "Next.js",
+                                             "Prisma",
+                                             "Supabase",
+                                             "PostgreSQL",
+                                             "TypeScript",
+                                             "Zod",
+                                             "OTP",
+                                             "Twilio",
+                                             "rate limiting",
+                                             "database indexing",
+                                             "schema normalization",
+                                             "data migration",
+                                             "image pipelines",
+                                             "Expo",
+                                             "Render"
+                                         ],
+                            "llm_brief":  "Backend Engineer Intern at Axlerator, a truck-selling startup (Jan-Jun 2026, remote, mentor Pranshu). Owned the database layer end to end: cut query times on the highest-traffic truck-listing and transaction tables from 4-5 seconds to ~1 second with targeted indexes, normalized the schema (new columns, less redundancy, ~15% faster dev workflow), and migrated the legacy dataset in 1-2 days with integrity intact. Built marketplace backend depth around it: 7-model Prisma schema with 5 migrations, 12 API routes (OTP-gated inquiries, search, similar trucks, image upload), a full OTP system (6-digit, 10-min expiry, 5 attempts, Twilio), 11 Zod validation schemas, rate limiting plus security headers, seed scripts for 30 trucks, an image pipeline mapping 1,282 uploads across 2 Supabase projects, and 33 deployment runbooks. Certificate ref 00612 cites \u0027exceptional diligence, technical skill, and commitment\u0027.",
+                            "metrics":  {
+                                            "api_routes":  "12 files / 14 handlers",
+                                            "cert_ref":  "00612",
+                                            "data_verified":  "100+ products",
+                                            "db_models":  7,
+                                            "images_mapped":  "~1,282 across 2 Supabase projects",
+                                            "migrations":  "5 Prisma + 1 Supabase",
+                                            "query_latency":  "4-5s to ~1s",
+                                            "troubleshooting_docs":  33,
+                                            "workflow_speedup":  "~15%"
+                                        },
+                            "repo_url":  null,
+                            "role":  "Backend Engineer Intern",
+                            "source_code":  "Internships/Axlerator/acelerate/Axlerator_m/ (full marketplace: app/api, prisma, lib, scripts, mobile-app, mappings)",
+                            "stack":  [
+                                          "Next.js 15",
+                                          "TypeScript",
+                                          "Prisma 6",
+                                          "Supabase / PostgreSQL",
+                                          "Zod",
+                                          "Twilio (OTP SMS)",
+                                          "Expo React Native",
+                                          "Render"
+                                      ],
+                            "type":  "internship",
+                            "work_location":  "Remote (Mumbai company)",
+                            "xyz_bullets":  [
+                                                {
+                                                    "bullet":  "Cut query times on the highest-traffic truck-listing and transaction tables from 4-5 seconds to ~1 second with targeted indexes on a marketplace where those tables get hit constantly.",
+                                                    "x":  "Cut highest-traffic query times from 4-5 seconds to ~1 second",
+                                                    "y":  "~80% latency cut on the platform\u0027s most-hit tables, visibly more responsive product",
+                                                    "z":  "designing targeted indexes after identifying the listing/transaction bottleneck"
+                                                },
+                                                {
+                                                    "bullet":  "Normalized the production schema (removed redundancy, added columns where the model needed them), making queries easier to write and ~15% faster to develop with.",
+                                                    "x":  "Normalized the production schema",
+                                                    "y":  "~15% faster dev workflow plus leaner, easier queries",
+                                                    "z":  "restructuring tables, adding missing columns, and killing duplicated fields"
+                                                },
+                                                {
+                                                    "bullet":  "Migrated the full legacy truck-listing dataset into the new schema in 1-2 days with data integrity intact â€” a migration that could easily have taken far longer.",
+                                                    "x":  "Migrated the full legacy dataset in 1-2 days",
+                                                    "y":  "zero integrity loss on a large existing production dataset",
+                                                    "z":  "planning column mapping, running the migration, and verifying data throughout"
+                                                },
+                                                {
+                                                    "bullet":  "Designed the buyer-seller data model and workflow logic governing how listings, requests, and matches move through the platform.",
+                                                    "x":  "Designed the buyer-seller data model and workflow",
+                                                    "y":  "listings, requests, and matches flow through one coherent system",
+                                                    "z":  "modeling the marketplace entities and their connection logic"
+                                                },
+                                                {
+                                                    "bullet":  "Verified data accuracy across 100+ products including legal-document checks and image-processing support for backend workflows.",
+                                                    "x":  "Verified data accuracy across 100+ products",
+                                                    "y":  "listings trustworthy as the platform scaled, backed by document checks",
+                                                    "z":  "auditing listing data, verifying legal documents, and supporting image pipelines"
+                                                },
+                                                {
+                                                    "bullet":  "Shipped a 7-model marketplace schema (trucks, submissions, inquiries, OTP, contact, valuation, search) evolved through 5 Prisma migrations plus a mirrored Supabase migration with 6 indexes and an updated-at trigger.",
+                                                    "x":  "Shipped a 7-model schema evolved through 6 migrations",
+                                                    "y":  "registration numbers, OTP, geo columns added without breaking existing data",
+                                                    "z":  "writing explicit migrations for every schema change on both Prisma and Supabase"
+                                                },
+                                                {
+                                                    "bullet":  "Built 12 API routes (search, truck CRUD, similar trucks, OTP send/verify, gated inquiries, submissions, valuation, image upload) all guarded by 11 Zod schemas with hard bounds.",
+                                                    "x":  "Built 12 API routes with zero unvalidated input",
+                                                    "y":  "phones, years, prices, pagination, and OTPs all range-checked before touching the DB",
+                                                    "z":  "validating every route with Zod schemas (years 1900+, km 0-10M, pages capped at 100)"
+                                                },
+                                                {
+                                                    "bullet":  "Launched OTP-gated inquiries (6-digit codes, 10-minute expiry, 5-attempt cap, 1-minute resend block, SHA-256 hashed with timing-safe compare, Twilio SMS) so only verified humans contact sellers.",
+                                                    "x":  "Launched OTP-gated seller inquiries",
+                                                    "y":  "spam blocked: 5-attempt cap, 10-min expiry, resend throttling, hashed codes",
+                                                    "z":  "building send/verify flows with Twilio, hashed storage, and constant-time comparison"
+                                                },
+                                                {
+                                                    "bullet":  "Ranked similar trucks fairly (same manufacturer plus Â±30% price band, deduped, max 4) with a seed fallback so recommendations never render empty.",
+                                                    "x":  "Ranked similar trucks that actually feel similar",
+                                                    "y":  "max 4 relevant results, never an empty or crashing widget",
+                                                    "z":  "combining manufacturer match with a Â±30% price band and dedupe logic"
+                                                },
+                                                {
+                                                    "bullet":  "Made search instant and safe (certified-only results, 3-field fuzzy match, capped pagination, fire-and-forget query logging) in a single 95-line route.",
+                                                    "x":  "Made search instant and safe",
+                                                    "y":  "certified results only, paginated, every query logged for analytics",
+                                                    "z":  "filtering certified stock with ilike matching and bounded pagination"
+                                                },
+                                                {
+                                                    "bullet":  "Shipped a 2,276-line sell-truck intake (17 fields, 8-photo cap, 10MB limit, live previews, direct Supabase upload) that replaced a 12-step estimator wizard.",
+                                                    "x":  "Shipped a sell-truck intake sellers finish",
+                                                    "y":  "17 fields plus 8 photos in one flow, replacing a 12-step wizard",
+                                                    "z":  "building a validated single-form page with live photo previews and direct uploads"
+                                                },
+                                                {
+                                                    "bullet":  "Migrated ~1,282 listing images across 2 Supabase projects with registration-indexed mapping files, so every truck photo resolves deterministically.",
+                                                    "x":  "Migrated ~1,282 listing images without losing one",
+                                                    "y":  "every photo addressable by registration number across 2 storage projects",
+                                                    "z":  "scripting bulk uploads plus JSON mappings keyed by plate numbers like HR-38-W-2162"
+                                                },
+                                                {
+                                                    "bullet":  "Resolved truck photos through a 3-strategy image API (live storage listing, then mapping file with 4 filename normalizations, then safe fallback) that returns images instead of errors.",
+                                                    "x":  "Resolved truck photos that never 404 the gallery",
+                                                    "y":  "storage, mapping, and fallback layers with debug metadata on failure",
+                                                    "z":  "layering live listing over normalized mapping lookup over safe defaults"
+                                                },
+                                                {
+                                                    "bullet":  "Seeded 30 real trucks (makes, years, kilometers, prices, cities) plus 8 registration-indexed HR trucks and a verified-data refresh pass with true odometer readings.",
+                                                    "x":  "Seeded 30 real trucks plus verified refresh data",
+                                                    "y":  "demo and staging always boot with realistic, verifiable inventory",
+                                                    "z":  "writing seed and update scripts with genuine specs and registration keys"
+                                                },
+                                                {
+                                                    "bullet":  "Hardened every endpoint with 100 req/min rate limiting, 6 security headers (HSTS, CSP, frame/XSS guards), CORS allowlists, and Prisma-only queries (no raw SQL injection surface).",
+                                                    "x":  "Hardened every endpoint by default",
+                                                    "y":  "abuse throttled, clickjacking/MIME/XSS headers set, zero raw-SQL surface",
+                                                    "z":  "enforcing edge middleware with rate limits, security headers, and ORM-only access"
+                                                },
+                                                {
+                                                    "bullet":  "Kept deploys boring with render.yaml, env templates, and 33 troubleshooting runbooks covering Supabase buckets, Render builds, and image migration â€” the same docs that unblocked production twice.",
+                                                    "x":  "Kept deploys boring with 33 runbooks",
+                                                    "y":  "bucket policies, build fixes, and migration guides on file for every incident class",
+                                                    "z":  "documenting each fix (storage, deploy, images) as a repeatable runbook"
+                                                },
+                                                {
+                                                    "bullet":  "Extended the marketplace to mobile with an Expo React Native app (5 screens, shared API service, image-picker selling flow) against the same backend.",
+                                                    "x":  "Extended the marketplace to mobile",
+                                                    "y":  "browse, sell, and detail flows on 5 native screens sharing one API",
+                                                    "z":  "building an Expo client with navigation, filters, and camera-roll uploads"
+                                                },
+                                                {
+                                                    "bullet":  "Earned an \u0027exceptional diligence, technical skill, and commitment\u0027 citation (certificate ref 00612, CGO-signed) after working across the whole database layer under a mentor\u0027s review.",
+                                                    "x":  "Earned an exceptional-diligence citation from the CGO",
+                                                    "y":  "certificate ref 00612 signed by CGO Raunak Chaudhary",
+                                                    "z":  "owning performance, structure, and product logic end to end with mentor-reviewed decisions"
+                                                },
+                                                {
+                                                    "bullet":  "Operated like an owner, not a ticket-taker, in a small startup â€” performance, schema, migration, verification, and deployment reasoning in one role.",
+                                                    "x":  "Operated like an owner across the whole data layer",
+                                                    "y":  "broader scope than a typical intern: perf, structure, logic, and shipping",
+                                                    "z":  "taking end-to-end responsibility with downstream-impact thinking on every change"
+                                                },
+                                                {
+                                                    "bullet":  "Thought through downstream impact before implementing (schema and migration steps reviewed with mentor Pranshu), learning to weigh fixes against their blast radius.",
+                                                    "x":  "Thought through downstream impact before implementing",
+                                                    "y":  "no cowboy migrations; every schema decision reviewed first",
+                                                    "z":  "reviewing decisions with a mentor and reasoning about affected queries and data"
+                                                }
+                                            ]
+                        },
+                        {
+                            "company":  "Cognifyz Technologies (ISO 9001:2015)",
+                            "dates":  "Nov 2025 - Dec 2025 (8 weeks, per formal report; completion certificate 04/12/2025)",
+                            "evidence":  [
+                                             "Internships/Cognifyz/internship_python_Dev_cognifyz/Level1/*.py (5 programs, read line by line)",
+                                             "Internships/Cognifyz/internship_python_Dev_cognifyz/Level2/*.py (5 programs, read line by line)",
+                                             "Internships/Cognifyz/internship_python_Dev_cognifyz/Level3/3_1_web_scraper.py (44 lines), 3_2_data_vis_tool.py (221 lines), 3_3_automation.py (31 lines)",
+                                             "Internships/Cognifyz/internship_python_Dev_cognifyz/Internship_Report.pdf (formal report: 8 weeks, 13 programs, 3 task sets, week-wise breakdown)",
+                                             "Internships/Cognifyz/internship_python_Dev_cognifyz/Level3/Dataset.csv (2.2MB) + Output_3_3.csv (cleaned output)",
+                                             "Internships/Cognifyz/Cognifyz-Completion-Certificate.jpeg (Intern ID CTI/A1/C242826)"
+                                         ],
+                            "id":  "cognifyz-technologies",
+                            "keywords":  [
+                                             "Python",
+                                             "pandas",
+                                             "matplotlib",
+                                             "seaborn",
+                                             "Plotly",
+                                             "requests",
+                                             "BeautifulSoup",
+                                             "regex",
+                                             "OOP",
+                                             "ETL",
+                                             "data cleaning",
+                                             "data visualization",
+                                             "web scraping",
+                                             "CSV",
+                                             "Excel"
+                                         ],
+                            "llm_brief":  "Python Development Intern at Cognifyz Technologies (8 weeks, Nov-Dec 2025, remote). Completed 13 programs across 3 progressive task sets: 5 Python fundamentals (string ops, converters, regex validation, dispatch calculator, palindromes), 5 logic builders (guessing games, password checker, Fibonacci, word-frequency ETL), and 3 industry tools â€” a configurable web scraper, a 221-line OOP data-visualization tool with 6 chart types, and an automated cleaning pipeline that took a 9,551x21 dataset from 9 blanks to 0. Documented in a formal report with week-wise breakdown, alternatives, and limitations. Intern ID CTI/A1/C242826.",
+                            "metrics":  {
+                                            "blanks_eliminated":  "9 to 0",
+                                            "chart_types":  6,
+                                            "dataset":  "9,551 rows x 21 cols",
+                                            "duration_weeks":  8,
+                                            "intern_id":  "CTI/A1/C242826",
+                                            "programs":  13,
+                                            "task_sets":  3
+                                        },
+                            "repo_url":  null,
+                            "role":  "Python Development Intern",
+                            "source_code":  "Internships/Cognifyz/internship_python_Dev_cognifyz/ (full task repo: Level1/Level2/Level3 + report + dataset)",
+                            "stack":  [
+                                          "Python",
+                                          "pandas",
+                                          "matplotlib",
+                                          "seaborn",
+                                          "Plotly",
+                                          "requests",
+                                          "BeautifulSoup",
+                                          "re (regex)"
+                                      ],
+                            "type":  "internship",
+                            "work_location":  "Jaipur, Remote",
+                            "xyz_bullets":  [
+                                                {
+                                                    "bullet":  "Cleaned a 9,551-row x 21-column restaurant dataset from 9 missing values to zero with a 31-line automated pipeline (drop_duplicates, mean imputation for numerics, mode imputation for categoricals with empty-guard).",
+                                                    "x":  "Cleaned a 9,551-row x 21-column dataset from 9 missing values to zero",
+                                                    "y":  "9 blanks to 0, verified on shipped Dataset.csv with clean Output_3_3.csv exported",
+                                                    "z":  "automating drop_duplicates plus mean/mode imputation in a reusable pandas pipeline"
+                                                },
+                                                {
+                                                    "bullet":  "Built a 221-line OOP data-visualization tool serving 6 chart types (scatter, line, bar, histogram, box, correlation heatmap), each with per-chart type rules and a static-to-interactive Plotly toggle.",
+                                                    "x":  "Built an OOP visualization tool with 6 chart types",
+                                                    "y":  "wrong-type inputs rejected with eligible-column hints instead of tracebacks",
+                                                    "z":  "pre-classifying numeric/categorical columns and validating every plot call before rendering"
+                                                },
+                                                {
+                                                    "bullet":  "Made the visualization tool usable by non-technical staff through case-insensitive column resolution, auto CSV/Excel detection, and a numbered menu loop with data preview.",
+                                                    "x":  "Made the visualization tool usable by non-technical staff",
+                                                    "y":  "any casing, either file type, guided menu with preview â€” zero pandas knowledge needed",
+                                                    "z":  "adding a lowercase column map, format auto-detection, and a menu-driven interface"
+                                                },
+                                                {
+                                                    "bullet":  "Scraped any website with a configurable scraper accepting arbitrary URLs plus comma-separated CSS selectors, with polite 1s delays, custom User-Agent, and raise_for_status error handling.",
+                                                    "x":  "Scraped any website without code changes",
+                                                    "y":  "arbitrary URLs and selector sets work; failures reported cleanly instead of crashing",
+                                                    "z":  "parameterizing URL plus selectors with polite delays, headers, and RequestException handling"
+                                                },
+                                                {
+                                                    "bullet":  "Delivered extraction users can trust by filtering noise (text longer than 5 chars), deduping order-preservingly, and printing numbered results.",
+                                                    "x":  "Delivered extraction users can trust",
+                                                    "y":  "no duplicates, no junk snippets, numbered output ready to act on",
+                                                    "z":  "filtering short strings, order-preserving dedup, and enumerated console output"
+                                                },
+                                                {
+                                                    "bullet":  "Enforced password policy in code (8+ chars with lowercase, uppercase, digit, and special class, early-return on first failure) using regex lookups per character class.",
+                                                    "x":  "Enforced password policy in code",
+                                                    "y":  "weak passwords rejected with a clear verdict across all 5 failure modes",
+                                                    "z":  "checking length plus 4 regex character classes with early-return logic"
+                                                },
+                                                {
+                                                    "bullet":  "Validated emails with an anchored fullmatch regex (local part, domain, 2+ letter TLD) that rejects missing-@, missing-domain, and short-TLD inputs.",
+                                                    "x":  "Validated emails with zero false accepts on malformed inputs",
+                                                    "y":  "missing-@, missing-domain, and 1-letter-TLD cases all correctly rejected",
+                                                    "z":  "applying an anchored fullmatch pattern instead of substring checks"
+                                                },
+                                                {
+                                                    "bullet":  "Generated Fibonacci sequences in O(n) time iteratively with edge handling (n\u003c=0 invalid, n==1 seed), avoiding recursion overhead entirely.",
+                                                    "x":  "Generated Fibonacci sequences in O(n) iterative time",
+                                                    "y":  "correct from n==1 upward; invalid inputs rejected, never hung or crashed",
+                                                    "z":  "looping with two-variable state instead of exponential recursion"
+                                                },
+                                                {
+                                                    "bullet":  "Counted word frequencies across whole files (punctuation stripped, lowercased, dict.get counting) into alphabetically sorted output files plus console.",
+                                                    "x":  "Counted word frequencies across whole files",
+                                                    "y":  "case-insensitive counts persisted sorted to disk and echoed to console",
+                                                    "z":  "normalizing text and aggregating with dict.get over streamed lines"
+                                                },
+                                                {
+                                                    "bullet":  "Proved range-parameterization beats hardcoding by refactoring the 1-100 guessing game into a user-ranged guesser with dynamic f-string prompts and higher/lower feedback.",
+                                                    "x":  "Proved parameterization beats hardcoding",
+                                                    "y":  "one program now serves any range with adaptive prompts",
+                                                    "z":  "refactoring fixed bounds into user inputs with dynamic messaging"
+                                                },
+                                                {
+                                                    "bullet":  "Converted temperatures both directions with case-insensitive units and float precision, including the -40 crossover point where both scales agree.",
+                                                    "x":  "Converted temperatures both directions without unit errors",
+                                                    "y":  "C/F accepted in either case; -40 crossover verified",
+                                                    "z":  "branching on normalized units with float arithmetic and a target-unit helper"
+                                                },
+                                                {
+                                                    "bullet":  "Routed 4 arithmetic operations through a dispatch function with sequential multi-input handling and readable expression output.",
+                                                    "x":  "Routed 4 arithmetic operations through clean dispatch",
+                                                    "y":  "every op computed and echoed as a readable expression",
+                                                    "z":  "branching on the operator symbol with typed inputs and f-string output"
+                                                },
+                                                {
+                                                    "bullet":  "Detected palindromes with a 5-line slice-and-compare check, the same idiom powering the string reverser.",
+                                                    "x":  "Detected palindromes in 5 lines",
+                                                    "y":  "racecar/level pass, hello/python correctly rejected",
+                                                    "z":  "comparing strings against their [::-1] reversal"
+                                                },
+                                                {
+                                                    "bullet":  "Completed 13 programs across 3 progressive task sets in 8 weeks (Nov-Dec 2025), each with terminal-output screenshots proving execution.",
+                                                    "x":  "Completed 13 programs across 3 progressive task sets in 8 weeks",
+                                                    "y":  "5 fundamentals plus 5 logic builders plus 3 industry tools, every one screenshot-verified",
+                                                    "z":  "working a fundamentals-to-logic-to-applied curriculum with proof of execution"
+                                                },
+                                                {
+                                                    "bullet":  "Wrote a formal internship report with week-wise breakdown, alternative approaches per program (e.g., 4 string-reversal methods), honest limitations, and 12 technical references.",
+                                                    "x":  "Wrote a formal report most interns never produce",
+                                                    "y":  "week-wise log, alternatives analysis, limitations section, 12 references",
+                                                    "z":  "documenting every program with breakdowns, comparisons, and engineering honesty"
+                                                },
+                                                {
+                                                    "bullet":  "Climbed three paradigms in 8 weeks (procedural to functional to OOP), ending in a class-based tool with encapsulated state and reusable methods.",
+                                                    "x":  "Climbed three paradigms in 8 weeks",
+                                                    "y":  "from scripts to functions to a 221-line class-based tool",
+                                                    "z":  "progressing from procedural programs through reusable functions to OOP design"
+                                                },
+                                                {
+                                                    "bullet":  "Practiced PEP-8 clean code throughout (modular functions, single responsibility, try/except file handling, utf-8 output) across all 13 programs.",
+                                                    "x":  "Practiced production code habits across all 13 programs",
+                                                    "y":  "modular functions, context-managed files, handled I/O errors, utf-8 safety",
+                                                    "z":  "following PEP-8 style with separation of logic and I/O in every program"
+                                                },
+                                                {
+                                                    "bullet":  "Handled real dataset scale (2.2MB CSV in, 2.2MB clean CSV out) with vectorized pandas ops instead of row loops.",
+                                                    "x":  "Handled real dataset scale, not toy arrays",
+                                                    "y":  "2.2MB in, 2.2MB clean out, fully vectorized",
+                                                    "z":  "processing 9.5K rows with column-level pandas operations"
+                                                },
+                                                {
+                                                    "bullet":  "Earned completion certification (Intern ID CTI/A1/C242826, dated 04/12/2025) from an ISO 9001:2015 company for the full 8-week program.",
+                                                    "x":  "Earned completion certification for the full program",
+                                                    "y":  "Intern ID CTI/A1/C242826, certificate dated 04/12/2025",
+                                                    "z":  "delivering all 13 programs plus formal report through the 8-week curriculum"
+                                                },
+                                                {
+                                                    "bullet":  "Connected every exercise to industry value (validation to data quality, scraping to market intelligence, pipelines to ML prep) in report write-ups recruiters can quote.",
+                                                    "x":  "Connected every exercise to industry value",
+                                                    "y":  "each program documented with real-world applications, not just code",
+                                                    "z":  "writing purpose, relevance, and application sections for all 13 programs"
+                                                }
+                                            ]
+                        },
+                        {
+                            "company":  "Grozoom Ventures",
+                            "confidence":  "medium - repo is EMPTY on GitHub (verified 2026-09-13); all technical detail comes from the owner\u0027s compiled writeup in Chirag-Profile-Master-Sheet.html (gz-meta) and chirag-complete-profile.json, cross-consistent across both files",
+                            "dates":  "dates TBC (owner has not recorded them - get offer/certificate letter before background checks)",
+                            "evidence":  [
+                                             "Chirag-Profile-Master-Sheet.html #gz-meta (six stages, AES-CBC, PoW types, telemetry, CTF flag)",
+                                             "chirag-complete-profile.json linkedin_about + pp-exp (same stack and outcomes)",
+                                             "GitHub repo chirag-gupta7/Grozoom-Venture-Internship verified EMPTY - no code to contradict the writeup"
+                                         ],
+                            "id":  "grozoom-ventures",
+                            "keywords":  [
+                                             "Python",
+                                             "requests",
+                                             "hashlib",
+                                             "pycryptodome",
+                                             "AES-CBC",
+                                             "PKCS7",
+                                             "CryptoJS",
+                                             "proof-of-work",
+                                             "SHA-256",
+                                             "reverse engineering",
+                                             "anti-bot",
+                                             "telemetry",
+                                             "structured logging",
+                                             "REST APIs"
+                                         ],
+                            "llm_brief":  "Python/Backend Intern at Grozoom Ventures (remote). Built a Python security-automation client that fully automated registration on a hardened test portal: reverse-engineered obfuscated JavaScript to recover an AES key/IV pair, reimplemented CryptoJS-compatible AES-CBC encryption with PKCS7 padding, solved arithmetic, sequence, and SHA-256 hash-chain proof-of-work challenges, generated synthetic mouse-movement telemetry, and chained six API stages end to end with structured logging. Completed end to end; completion flag CTF{Advanced_Python_Automation_Master_2025}. GitHub repo is currently empty so cite the flag, not the repo.",
+                            "repo_status":  "EMPTY - verified via GitHub page fetch (0 files, \u0027This repository is empty\u0027)",
+                            "repo_url":  "https://github.com/chirag-gupta7/Grozoom-Venture-Internship",
+                            "role":  "Python/Backend Intern (security automation)",
+                            "stack":  [
+                                          "Python",
+                                          "requests",
+                                          "hashlib",
+                                          "pycryptodome",
+                                          "AES-CBC (CryptoJS-compatible, PKCS7)",
+                                          "SHA-256 proof-of-work",
+                                          "obfuscated-JS reverse engineering"
+                                      ],
+                            "type":  "internship",
+                            "work_location":  "Remote",
+                            "xyz_bullets":  [
+                                                {
+                                                    "bullet":  "Automated a hardened 6-stage registration pipeline end to end (init, device-check, security-verify, geo-validate, complete-registration), earning completion flag CTF{Advanced_Python_Automation_Master_2025}.",
+                                                    "x":  "Automated a hardened 6-stage registration pipeline end to end",
+                                                    "y":  "completion flag CTF{Advanced_Python_Automation_Master_2025} earned",
+                                                    "z":  "building a Python client (requests, hashlib, pycryptodome) that defeated every layered anti-bot control"
+                                                },
+                                                {
+                                                    "bullet":  "Recovered a working AES key/IV pair from obfuscated JavaScript and reimplemented CryptoJS-compatible AES-CBC with PKCS7 padding, restoring interoperable encryption with the portal.",
+                                                    "x":  "Recovered a working AES key/IV pair from obfuscated JavaScript",
+                                                    "y":  "portal accepted the Python-generated ciphertext; pipeline completed",
+                                                    "z":  "reverse-engineering the obfuscated JS and reimplementing CryptoJS-compatible AES-CBC via pycryptodome"
+                                                },
+                                                {
+                                                    "bullet":  "Defeated arithmetic, sequence, and SHA-256 hash-chain proof-of-work challenges plus behavioral telemetry checks, unblocking the security-verify and geo-validate stages.",
+                                                    "x":  "Defeated 3 proof-of-work classes plus behavioral telemetry checks",
+                                                    "y":  "security-verify and geo-validate stages unblocked; full pipeline green",
+                                                    "z":  "writing custom PoW solvers, synthesizing mouse-movement telemetry, and chaining all stages with structured logging"
+                                                }
+                                            ]
+                        },
+                        {
+                            "company":  "Elvara Group",
+                            "dates":  "Sep 2026 (repo commit \u0027Upload internship automation files\u0027 2026-09-13; assignment designed as a 2-4 hour single-afternoon build)",
+                            "evidence":  [
+                                             "Assignment_Elvara Group.pdf (role title, stack constraints, judging criteria, sample input, verdict rule)",
+                                             "AI-Powered Real Estate Deal Analyzer and Dashboard.json (all 11 nodes, prompts, verdict expression, Airtable base/table IDs)",
+                                             "table_interface.txt.txt (production webhook URL + Airtable interface URL)",
+                                             "download.png (n8n graph screenshot matching the JSON topology)"
+                                         ],
+                            "id":  "elvara-group",
+                            "keywords":  [
+                                             "n8n",
+                                             "OpenAI gpt-4o-mini",
+                                             "Groq gpt-oss-20b",
+                                             "structured output parsing",
+                                             "webhooks",
+                                             "Airtable",
+                                             "Softr",
+                                             "prompt engineering",
+                                             "LLM fallback",
+                                             "automation"
+                                         ],
+                            "links":  {
+                                          "dashboard":  "https://airtable.com/appF0IKX8VF3XFtp9/pagFF6GiLAJFq6jCa",
+                                          "webhook_production":  "https://chiragidk.app.n8n.cloud/webhook/real-estate-deal"
+                                      },
+                            "llm_brief":  "AI and Automation Engineering Intern assignment at Elvara Group: \u0027The Instant Real Estate Deal Engine\u0027. In one afternoon built a live internal tool - an 11-node n8n workflow triggered by webhook that feeds raw listing text to an LLM (OpenAI gpt-4o-mini primary, Groq gpt-oss-20b fallback) coerced to strict JSON via a structured output parser, branches on extraction success (failures tagged HUMAN REVIEW for bonus points), and writes Buy/Pass verdicts to Airtable behind a public Deal Board dashboard. Shipped with live production webhook and dashboard links.",
+                            "repo_status":  "4 files, 1 commit",
+                            "repo_url":  "https://github.com/chirag-gupta7/elvara-group-automation-Internship",
+                            "role":  "AI \u0026 Automation Engineering Intern",
+                            "stack":  [
+                                          "n8n (11 nodes)",
+                                          "OpenAI gpt-4o-mini",
+                                          "Groq gpt-oss-20b (fallback)",
+                                          "n8n structured output parser",
+                                          "Airtable",
+                                          "Airtable Interfaces dashboard",
+                                          "webhooks"
+                                      ],
+                            "type":  "internship assignment (live tool, 2-4 hr brief)",
+                            "work_location":  "Remote",
+                            "xyz_bullets":  [
+                                                {
+                                                    "bullet":  "Shipped a live AI deal-analysis tool in a single afternoon that passes the acceptance test (webhook POST visible on dashboard within 30 seconds) via an 11-node n8n workflow.",
+                                                    "x":  "Shipped a live AI deal-analysis tool in a single afternoon",
+                                                    "y":  "passes the live acceptance test: POST to dashboard in under 30s",
+                                                    "z":  "wiring webhook trigger, AI analyzer, success/error branch, and Airtable write behind a Deal Board"
+                                                },
+                                                {
+                                                    "bullet":  "Coerced LLM output into database-ready strict JSON (7-field schema) across dual models, satisfying the \u0027AI Structure\u0027 judging criterion with zero conversational-text failures.",
+                                                    "x":  "Coerced LLM output into database-ready strict JSON",
+                                                    "y":  "7-field schema validated every run; zero conversational-text failures",
+                                                    "z":  "combining strict system rules with a structured-output parser plus Groq fallback"
+                                                },
+                                                {
+                                                    "bullet":  "Implemented the investor\u0027s Buy/Pass rule ((price + renovation under $400k) AND Airbnb-legal = BUY, else PASS) plus the bonus-point HUMAN REVIEW branch so no listing ever breaks the flow.",
+                                                    "x":  "Implemented the Buy/Pass rule plus bonus-point error handling",
+                                                    "y":  "every listing lands a verdict (BUY, PASS, or HUMAN REVIEW); zero broken runs",
+                                                    "z":  "encoding the pricing/legality rule and branching on extractionSuccess to a safe review path"
+                                                }
+                                            ]
+                        },
+                                                {
+                            "company": "PrimeTrade",
+                            "dates": "Two approximately three-month blocks (candidate-reported); exact block dates are unresolved. The January 2026 values below are project-documentation dates, not internship chronology.",
+                            "engagement_structure": "Candidate reports one internship/employment relationship with two approximately three-month blocks; exact dates are not supplied.",
+                            "rehire_context": "Candidate reports being rehired for the second block after the initial three months and attributes the rehire to the quality of their work; this is not independently employer-verified.",
+                            "engagement_blocks": [
+                                {
+                                    "sequence": 1,
+                                    "duration_stated": "approximately three months",
+                                    "start_date": null,
+                                    "end_date": null
+                                },
+                        {
+                                    "sequence": 2,
+                                    "duration_stated": "approximately three months",
+                                    "start_date": null,
+                                    "end_date": null,
+                                    "rehire_reported": true
+                                }
+                            ],
+                            "project_block_mapping": "Both projects are associated with this PrimeTrade relationship; the candidate did not specify which block each project belongs to.",
+                            "evidence": [
+                                "Candidate-provided Task 02 clarification; rehire and block structure are candidate-reported, not employer-verified."
+                            ],
+                            "id": "primetrade-python-developer-intern",
+                            "projects": [
+                                {
+                                    "name": "Binance Trading Bot",
+                                    "id": "primetrade-binance-trading-bot",
+                                    "repo_url": "https://github.com/chirag-gupta7/Binance-trading-bot",
+                                    "project_documentation_dates": "Jan 2026 (docs self-version v1.0.0 dated 2026-01-22; 9 commits; assignment weights 50/30/10/10 per Instructions PDF)",
+                                    "documentation_date_note": "Original dates field describes repository/documentation history, not the employment block dates.",
+                                    "architecture": "8-command argparse CLI (market, limit, stop-limit, oco, twap, grid, status, history) over modular strategy classes, dotenv secrets, simulated test mode",
+                                    "evidence": [
+                                        "Binance-trading-bot src/bot.py (460 lines, 8 subcommands verified)",
+                                        "src/validation.py (352 lines: 20 symbols, qty/price bounds, per-order logic)",
+                                        "src/logger.py (121 lines: 0600 TOCTOU-safe log creation)",
+                                        "src/api_client.py (280 lines, 10s timeout)",
+                                        "src/advanced/*.py (stop_limit 232, oco 277, twap 270, grid 319 lines)",
+                                        "docs/ (1283 lines: README 433, QUICKSTART 76, STATUS 322, IMPLEMENTATION_REPORT 452)",
+                                        "requirements.txt (3 exact pins)",
+                                        "Instructions Python Developer.pdf (assignment spec + weights)",
+                                        ".jules/sentinel.md (2 security learnings: TOCTOU log fix, NaN-validation fix)"
+                                    ],
+                                    "keywords": [
+                                        "Python",
+                                        "Binance USDT-M Futures",
+                                        "binance-connector",
+                                        "argparse CLI",
+                                        "Market",
+                                        "Limit GTC/IOC/FOK",
+                                        "Stop-Limit",
+                                        "OCO",
+                                        "TWAP",
+                                        "Grid",
+                                        "validation",
+                                        "structured logging",
+                                        "test mode",
+                                        "python-dotenv"
+                                    ],
+                                    "llm_brief": "Python Developer Intern at PrimeTrade: built a comprehensive CLI trading bot for Binance USDT-M Futures (~2,900 lines across 12 Python files). Eight argparse subcommands cover 6 order/strategy types (market, limit with GTC/IOC/FOK + post-only/reduce-only, stop-limit, OCO take-profit/stop-loss, TWAP time-slicing, LONG/SHORT grid) plus status and history commands, all guarded by strict validation (20-symbol whitelist, quantity/price bounds, per-order logic) with structured timestamped logging and a fully simulated --test mode. Documented with a 433-line README, quickstart, and implementation report.",
+                                    "metrics": {
+                                        "advanced_strategies": 4,
+                                        "cli_commands": 8,
+                                        "core_orders": 2,
+                                        "dependencies": 3,
+                                        "doc_lines": 1283,
+                                        "price_bounds": [
+                                            1e-05,
+                                            999999
+                                        ],
+                                        "quantity_bounds": [
+                                            0.001,
+                                            1000000
+                                        ],
+                                        "src_lines": 2892,
+                                        "supported_symbols": 20,
+                                        "test_mode": "all 6 order/strategy commands support --test"
+                                    },
+                                    "repo_status": "active, 9 commits, 75 PRs",
+                                    "stack": [
+                                        "Python 3.8+",
+                                        "binance-connector==3.5.0",
+                                        "python-dotenv==1.0.0",
+                                        "requests==2.31.0",
+                                        "argparse",
+                                        "threading (TWAP)",
+                                        "Binance USDT-M Futures API"
+                                    ],
+                                    "xyz_bullets": [
+                                        {
+                                            "bullet": "Delivered an 8-command CLI trading bot covering 6 order/strategy types (market, limit, stop-limit, OCO, TWAP, grid) plus status/history inspection across ~2,900 lines in 12 Python files.",
+                                            "x": "Delivered an 8-command CLI trading bot covering 6 order/strategy types",
+                                            "y": "full assignment rubric hit (core + advanced + logging + docs)",
+                                            "z": "building modular strategy classes over a shared validation and logging layer"
+                                        },
+                                        {
+                                            "bullet": "Blocked every bad order before the exchange (unknown symbols, out-of-range qty/price, inverted stop/TP logic) with field-level errors from a central validator.",
+                                            "x": "Blocked every bad order before the exchange",
+                                            "y": "20-symbol whitelist, qty 0.001-1M, price 0.00001-999999, per-order logic â€” all enforced",
+                                            "z": "centralizing checks in one OrderValidator used by every order and strategy path"
+                                        },
+                                        {
+                                            "bullet": "Made every action auditable and rehearsable (timestamped logs with function/line context; full --test simulation on all 6 commands) without touching real funds.",
+                                            "x": "Made every action auditable and rehearsable",
+                                            "y": "timestamped logs with context; full simulation on all 6 commands",
+                                            "z": "adding a singleton BotLogger plus simulated paths returning realistic fills and IDs"
+                                        },
+                                        {
+                                            "bullet": "Hardened the bot with two recorded security fixes (TOCTOU-safe 0600 logs; math.isfinite NaN guards) plus secrets-via-env and keys-only response logging.",
+                                            "x": "Hardened the bot with two recorded security fixes",
+                                            "y": "0600 log perms, NaN/Inf rejected, secrets never committed, keys-only logs",
+                                            "z": "creating logs atomically, guarding all numeric inputs, and minimizing log verbosity"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Simplified Trading Bot",
+                                    "id": "primetrade-simplified-trading-bot",
+                                    "repo_url": "https://github.com/chirag-gupta7/Simplified-Trading-Bot",
+                                    "project_documentation_dates": "Jan 2026 (commit 'Update README and bot.py to support Stop-Limit orders' 2026-01-10; 4 commits; predecessor/sibling of the full Binance-trading-bot)",
+                                    "documentation_date_note": "Original dates field describes repository/documentation history, not the employment block dates.",
+                                    "architecture": "Interactive menu loop (prompt_menu -> collect_order_inputs -> BasicBot -> display_order_summary); strict 5-file separation (bot.py Binance-only, cli.py input-only, config.py env-only, logger.py logging-only, main.py orchestration-only)",
+                                    "evidence": [
+                                        "Simplified-Trading-Bot trading_bot/bot.py (242 lines: BasicBot, 3 order methods, time sync)",
+                                        "trading_bot/cli.py (113 lines: interactive prompts, retry loops, order summary)",
+                                        "trading_bot/main.py (129 lines: orchestration, exit codes)",
+                                        "trading_bot/config.py (85 lines: env config, testnet toggle, recv_window)",
+                                        "trading_bot/logger.py (45 lines: rotating 1MBx3 file handler)",
+                                        "README.md + requirements.txt (python-binance, python-dotenv)"
+                                    ],
+                                    "keywords": [
+                                        "Python",
+                                        "Binance Futures Testnet",
+                                        "python-binance",
+                                        "interactive CLI",
+                                        "Market",
+                                        "Limit GTC",
+                                        "Stop-Limit",
+                                        "server-time sync",
+                                        "recv_window",
+                                        "rotating logs",
+                                        "clean architecture"
+                                    ],
+                                    "llm_brief": "PrimeTrade sibling bot (earlier/simpler iteration): an interactive menu-driven Binance Futures Testnet trader in clean layered architecture. A 242-line BasicBot class handles all exchange interaction (server-time sync, market/limit/STOP_LOSS_LIMIT orders, per-call try/except with context logging); a validated prompting CLI collects inputs with retry loops; env-based config toggles testnet/mainnet with recv_window; rotating 1MBx3 logs; testnet-only by design.",
+                                    "metrics": {
+                                        "architecture_files": 5,
+                                        "bot_lines": 242,
+                                        "log_rotation": "1MB x 3 backups",
+                                        "order_types": 3,
+                                        "recv_window_ms": 5000
+                                    },
+                                    "repo_status": "4 commits, master branch",
+                                    "stack": [
+                                        "Python 3.10+",
+                                        "python-binance",
+                                        "python-dotenv",
+                                        "Binance Futures Testnet"
+                                    ],
+                                    "xyz_bullets": [
+                                        {
+                                            "bullet": "Built a testnet-safe interactive trading bot (market, limit-GTC, stop-limit orders) with zero hardcoded secrets and strict 5-file separation of concerns.",
+                                            "x": "Built a testnet-safe interactive trading bot with zero hardcoded secrets",
+                                            "y": "3 order types through validated prompts; exchange, input, config, logging fully separated",
+                                            "z": "layering a BasicBot exchange class under a retry-loop CLI with env config"
+                                        },
+                                        {
+                                            "bullet": "Eliminated timestamp rejections and made every order traceable via startup server-time sync plus rotating 1MBx3 logs with full request/response context.",
+                                            "x": "Eliminated timestamp rejections and made every order traceable",
+                                            "y": "offset synced each session; every request/response logged with context",
+                                            "z": "fetching exchange server time on init and centralizing rotating logging"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "role": "Python Developer Intern",
+                            "type": "internship",
+                            "work_location": "Remote"
+                        },
+                        {
+                            "company": "Labmentix",
+                            "candidate_reported_context": "Candidate identifies this as the internship to add. The offer letter supplies offer terms, not independent confirmation of service or completion.",
+                            "dates": "Joining date stated: 15-Jul-2026; duration stated: six months. Actual service end date and completion status are not established.",
+                            "duration_stated": "six months",
+                            "evidence": [
+                                "Candidate-provided offer-letter details; no top-level PDF was found in the current working directory; no recursive search was performed, so it was not locally inspected."
+                            ],
+                            "id": "labmentix-python-development-intern",
+                            "joining_date": "15-Jul-2026",
+                            "letterhead_location": "Bengaluru, Karnataka, India",
+                            "offer_letter_date_printed": "10/07/2026 (preserved as printed; format ambiguous)",
+                            "role": "Python Development Intern",
+                            "service_end_date": null,
+                            "completion_status": "not established",
+                            "signatory": "Swaraj Phatangade, Founder & CEO",
+                            "type": "internship (candidate-reported; offer terms supplied)",
+                            "website": "www.labmentix.in",
+                            "xyz_bullets": []
+                        }
+                    ]
+}
